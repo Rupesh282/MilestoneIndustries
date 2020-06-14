@@ -7,6 +7,7 @@
     <title>Business HTML-5 Template </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
    <!-- CSS here -->
@@ -46,16 +47,16 @@
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="header-info-left">
                                         <ul>     
-                                            <li><i class="far fa-clock"></i> Mon - SAT: 6.00 am - 10.00 pm</li>
-                                            <li>Sun:  Closed</li>
+                                            <!-- <li><i class="far fa-clock"></i> Mon - SAT: 6.00 am - 10.00 pm</li> -->
+                                            <li>Milestone Industries</li>
                                         </ul>
                                     </div>
                                     <div class="header-info-right">
-                                        <ul class="header-social">    
+                                        <ul class="header-social">    <!-- 
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
+                                        <!-- <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -74,22 +75,28 @@
                                 <div class="col-xl-10 col-lg-10">
                                     <div class="menu-wrapper  d-flex align-items-center justify-content-end">
                                         <!-- Main-menu -->
+                                        <input type="text"  id="search" placeholder="search" class = "topSearch">
+                                        <div class="boxed-btn"> <i class="fas fa-search"></i></div>
+                                <div class="main-menu d-none d-lg-block">
                                         <div class="main-menu d-none d-lg-block">
                                             <nav> 
                                                 <ul id="navigation">                                                                                          
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="about.html">About</a></li>
-                                                    <li><a href="services.html">Services</a></li>
-                                                    <li><a href="blog.html">Blog</a>
-                                                        <ul class="submenu">
-                                                            <li><a href="blog.html">Blog</a></li>
-                                                            <li><a href="blog_details.html">Blog Details</a></li>
-                                                            <li><a href="elements.html">Element</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="contact.html">Contact</a></li>
+                                            <!-- <li><a href="#"><input type="button" value="search" name="search" class = "boxed-btn"></a></li> -->
+                                            <li><a href="about.html">About</a></li>
+                                            <!-- <li><a href="services.html">Services</a></li> -->
+                                            <li><a href="blog.html">Categories</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Blackstone</a></li>
+                                                    <li><a href="#">Veronica</a></li>
+                                                    <li><a href="#">Geetanjali</a></li>
                                                 </ul>
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><div class="boxed-btn"> <i class="fas fa-shopping-cart"></i></div></li>
+                                        </ul>
+                                            
                                             </nav>
+
                                         </div>
                                     </div>
                                 </div> 
@@ -197,38 +204,24 @@
                         </form>
                     </div>
                     <div class="col-lg-3 offset-lg-1">
-                        <h5>Corporate Office:</h5><br>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
-                                <p>Shop No. 25, 2nd Floor, Lifescape Nilay CHS Limited 11/43, Dr. B.J. Marg, Charni Road, Mumbai-400004</p>
+                                <h3>Buttonwood, California.</h3>
+                                <p>Rosemead, CA 91770</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3><p>+91-22-22005955</p></h3>
-                                <!-- <p>Mon to Fri 9am to 6pm</p> -->
-                            </div>
-                        </div>
-                        <h5>Factory Address:</h5><br>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-home"></i></span>
-                            <div class="media-body">
-                                <p>Unit no. 7, Survey No. 57, H.No, 2, Goraipada, Vasai (East), District Palghar, Pincode – 401208</p>
-                            </div>
-                        </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                            <div class="media-body">
-                                <p style="display:inline;white-space: nowrap">Customer Care: +91 9321402104</p>
-                                <!-- <p>Mon to Fri 9am to 6pm</p> -->
+                                <h3>+1 253 565 2365</h3>
+                                <p>Mon to Fri 9am to 6pm</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>cc@msiindia.in</h3><br>
+                                <h3>support@colorlib.com</h3>
                                 <p>Send us your query anytime!</p>
                             </div>
                         </div>
@@ -327,9 +320,9 @@
                         <div class="col-xl-3 col-lg-4">
                             <!-- Footer Social -->
                             <div class="footer-social f-right">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp-square"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>

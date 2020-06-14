@@ -113,8 +113,10 @@
   background: #fff;
   color: #14435c !important;
   display: inline-block;
-  padding: 18px 44px;
+  padding: 5px 20px;
+  margin-right: 20px;
   font-family: "Roboto", sans-serif;
+  border-radius: 6px;
   font-size: 14px;
   font-weight: 400;
   border: 0;
