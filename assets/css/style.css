@@ -1,4 +1,4 @@
-/* Theme Description
+ Theme Description
 -------------------------------------------------
 
 	  Theme Name:
@@ -96,6 +96,19 @@
 	color:$theme-color;
 */
 /* line 58, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_variables.scss */
+
+.btn_new{
+  background-color: #fff ; /* Blue background */
+  border: none; /* Remove borders */
+  color: #14435c; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn_new:hover {
+  background-color: #14435c ;
+}
 .boxed-btn {
   background: #fff;
   color: #14435c !important;
@@ -272,7 +285,7 @@ p {
 
 /* line 60, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
 .f-right {
-  float: right;
+  float: center;
 }
 
 /* line 63, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
@@ -3279,12 +3292,32 @@ hero-btn {
 .header-area .header-top .header-info-right .header-social li {
   display: inline-block;
 }
+.header-area .header-top .header-info-right .header-social label{
+  cursor: pointer;
+  /*width: 50px;*/
+  /*height: 50px;*/
+  text-align: center;
+  border-radius: 50%;
+  color: #727272;
+  transition: all .2s;
+}
 
+.header-area .header-top .header-info-right .header-social label:hover{
+  color: #fff;
+}
+
+/*#facebook:checked ~ .header-area .header-top .header-info-right .header-social .fa-facebook-f {*/
+  /*color: #3b5998;*/
+  /*transform: scale(1.1);*/
+  /*background: linear-gradient(45deg, #252323 50%, #302c2c 50%)*/
+  /*box-shadow: 0 0 20px #3b5998;*/
+/*}*/
 /* line 58, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .header-area .header-top .header-info-right .header-social li a {
   color: #fff;
   font-size: 16px;
   padding-left: 25px;
+  box-shadow: #DA5C5C;
 }
 
 /* line 62, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
@@ -3421,14 +3454,63 @@ hero-btn {
   -o-transform: rotateY(180deg);
 }
 
+.header-area .topSearch{
+  position: relative;
+  right: 20px;
+  width: 435px;
+  border-radius: 6px;
+  height: 35px;
+  text-align: center;
+}
+
+/*.header-area .searchButton{
+  position: absolute;
+  top: 23px;
+  width: 40px;
+  background-color: rgba(208,207,207,1.00);
+  height: 35px;
+  color: rgba(255,255,255,1.00);
+  border-radius: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}*/
+
 /* line 190, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .header-area .header-sticky.sticky-bar {
   background: #fff;
 }
 
+.header-area .header-sticky.sticky-bar .topSearch{
+  position: relative;
+  right: 20px;
+  width: 235px;
+  border-radius: 6px;
+  height: 35px;
+  text-align: center;
+}
+
+/*.header-area .header-sticky.sticky-bar .searchButton{
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  background-color: rgba(208,207,207,1.00);
+  height: 35px;
+  color: rgba(255,255,255,1.00);
+  border-radius: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  /*margin-right: 100px;*/
+}
+*/
+
+
+
 /* line 195, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .header-area .header-sticky.sticky-bar .main-menu nav > ul > li > a {
-  padding: 25px 20px !important;
+  /*padding: 25px 20px !important;*/
+  /*padding-left: 25px;*/
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3440,7 +3522,7 @@ hero-btn {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 190, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
-  .header-area .header-sticky.sticky-bar {
+  .header-area .header-sticky .sticky-bar {
     padding: 15px 0px;
   }
 }
@@ -4850,6 +4932,7 @@ hero-btn {
   .footer-area .footer-social {
     float: left;
     padding-top: 10px;
+    list-style: none;
   }
 }
 
@@ -4867,6 +4950,8 @@ hero-btn {
   font-size: 14px;
   text-align: center;
   margin-left: 16px;
+  display: inline-block;
+  border-radius: 20px;
 }
 
 /* line 184, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
@@ -4874,9 +4959,29 @@ hero-btn {
   margin-left: 0px;
 }
 
-/* line 187, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
+.footer-area .footer-social a:nth-child(1):hover 
+{
+ color: #55acee;
+}
+.footer-area .footer-social a:nth-child(2):hover
+{
+ color: #18147F;
+}
+.footer-area .footer-social a:nth-child(3):hover
+{
+ color: #4ACD3E;
+}
+.footer-area .footer-social a:nth-child(4):hover
+{
+ color: #C03F7C;
+}
+
+
+ /*line 187, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
+
 .footer-area .footer-social a:hover {
-  color: #fff;
+  /*color: #7073EB;*/
+  transform: scale(1.2);
 }
 
 /* line 2, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services.scss */
@@ -8256,4 +8361,4 @@ del {
   margin-bottom: 10px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map 
