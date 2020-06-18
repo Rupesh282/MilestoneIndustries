@@ -6180,8 +6180,11 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-social a:nth-child(5):hover {
     color: #E81616;
 }
+
 /*.footer-area .footer-social a:nth-child():hover {*/
-    /*color: #EAAA47;*/
+
+/*color: #EAAA47;*/
+
 /*}*/
 .footer-area .footer-social a:nth-child(6):hover {
     color: #CF772A;
