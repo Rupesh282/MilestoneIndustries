@@ -5778,7 +5778,7 @@ hero-btn {
 
 /* line 1, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area {
-    background: #11141b;
+    background: #040F46;
 }
 
 /* line 3, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
@@ -5798,7 +5798,7 @@ hero-btn {
 /* line 10, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-top .single-footer-caption .footer-pera .info1 {
     line-height: 1.8;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     color: #bdbdbd;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -5831,13 +5831,14 @@ hero-btn {
 }
 
 /* line 29, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
-.footer-area .footer-top .single-footer-caption .footer-number h4 {
+.footer-area .footer-top .single-footer-caption .footer-number h5 {
     color: #ff0000;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
 }
 .footer-area .footer-top .single-footer-caption .footer-number h6 {
+    margin-top: 20px;
     color: #ffffff;
     font-size: 20px;
     font-weight: 500;
@@ -5845,7 +5846,7 @@ hero-btn {
 }
 
 /* line 34, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
-.footer-area .footer-top .single-footer-caption .footer-number h4 span {
+.footer-area .footer-top .single-footer-caption .footer-number h5 span {
     color: #fff;
 }
 
@@ -5861,7 +5862,7 @@ hero-btn {
     top: 35px;
     font-family: "Poppins", sans-serif;
     font-size: 18px;
-    margin-left: 20px;
+    margin-left: 35px;
     margin-bottom: 38px;
     padding-bottom: 20px;
     font-weight: 500;
@@ -5878,7 +5879,7 @@ hero-btn {
     color: #bdbdbd;
     margin-bottom: 15px;
     text-transform: capitalize;
-    margin-left: 20px;
+    margin-left: 35px;
 }
 
 /* line 56, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
@@ -6076,7 +6077,7 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 
 /* line 122, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     padding-top: 30px;
 }
 
@@ -6087,11 +6088,12 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
     font-size: 16px;
     line-height: 2;
     margin-bottom: 12px;
+    margin-left: 25px;
 }
 
 /* line 133, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom .footer-copy-right p i {
-    color: #ff0000;
+    color: #fff;
 }
 
 /* line 136, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
@@ -6169,16 +6171,16 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-social a:nth-child(4):hover {
     color: #C03F7C;
 }
-.footer-area .footer-social a:nth-child(6):hover {
+.footer-area .footer-social a:nth-child(5):hover {
     color: #E81616;
 }
-.footer-area .footer-social a:nth-child(5):hover {
-    color: #EAAA47;
-}
-.footer-area .footer-social a:nth-child(7):hover {
+/*.footer-area .footer-social a:nth-child():hover {*/
+    /*color: #EAAA47;*/
+/*}*/
+.footer-area .footer-social a:nth-child(6):hover {
     color: #CF772A;
 }
-.footer-area .footer-social a:nth-child(8):hover {
+.footer-area .footer-social a:nth-child(7):hover {
     color: #E81616;
 }
 
