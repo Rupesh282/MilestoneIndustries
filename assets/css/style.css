@@ -3946,30 +3946,30 @@ hero-btn {
 /* line 910, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
 
 .footer-padding {
-    padding-top: 143px;
-    padding-bottom: 80px;
+    padding-top: 25px;
+    padding-bottom: 0px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* line 910, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
     .footer-padding {
-        padding-top: 143px;
-        padding-bottom: 80px;
+        padding-top: 25px;
+        padding-bottom: 0px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* line 910, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
     .footer-padding {
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 0px;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     /* line 910, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
     .footer-padding {
-        padding-top: 80px;
+        padding-top: 20px;
         padding-bottom: 0px;
     }
 }
@@ -3977,7 +3977,7 @@ hero-btn {
 @media (max-width: 575px) {
     /* line 910, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
     .footer-padding {
-        padding-top: 80px;
+        padding-top: 15px;
         padding-bottom: 0px;
     }
 }
@@ -6083,8 +6083,8 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 
 /* line 122, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom {
-    padding-bottom: 20px;
-    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 /* line 127, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
