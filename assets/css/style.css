@@ -145,14 +145,18 @@ Theme Description ------------------------------------------------- Theme Name: 
 }
 
 .boxed-btn {
+    position: absolute;
+    left: 1330px;
+    bottom: 20px;
     background: #fff;
     color: #14435c !important;
     display: inline-block;
-    padding: 5px 20px;
+    padding: 5px 5px;
     margin-right: 20px;
+    /*margin-left: 90px;*/
     font-family: "Roboto", sans-serif;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 400;
     border: 0;
     border: 1px solid #14435c;
@@ -4389,8 +4393,8 @@ hero-btn {
 
 .main-header .main-menu ul li a {
     color: #0d2d3e;
-    font-weight: 400;
-    padding: 39px 19px;
+    font-weight: 900;
+    padding: 8px 18px;
     display: block;
     font-size: 16px;
     -webkit-transition: all 0.3s ease-out 0s;
@@ -9597,10 +9601,15 @@ del {
 }
 .has-search .form-control {
     padding-left: 2.375rem;
+    margin-left: 190px;
+    /*position: fixed;*/
+    /*right:30px;*/
+    /*left:1090px;*/
 }
 .has-search .form-control-feedback {
     position: absolute;
     z-index: 4;
+    margin-left: 190px;
     display: block;
     width: 2.375rem;
     height: 2.375rem;
