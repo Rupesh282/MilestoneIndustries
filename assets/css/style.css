@@ -4715,7 +4715,8 @@ hero-btn {
 /* line 37, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
 .slider-area {
     margin-top: -1px;
-    background-image: url(../img/hero/h1_hero.jpg);
+    /* background-image: url(../img/hero/h1_hero.jpg); */
+    
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -5505,8 +5506,9 @@ hero-btn {
 }
 
 /* line 6, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_team.scss */
-.team-area .single-team .team-img img {
-    width: 100%;
+.single-team .team-img img {
+    width: 80%;
+    padding-left: 60px;
     transform: scale(1);
     transition: all 0.6s ease-out 0s;
 }
