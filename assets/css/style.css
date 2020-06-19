@@ -146,7 +146,7 @@ Theme Description ------------------------------------------------- Theme Name: 
 
 .boxed-btn {
     position: absolute;
-    left: 1150px;
+    left: 1200px;
     bottom: 10px;
     background: #fff;
     color: #14435c !important;
@@ -6084,7 +6084,7 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 
 /* line 122, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-top: 10px;
 }
 
