@@ -1921,7 +1921,7 @@ pre code {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     position: absolute;
     right: -30px;
-    bottom: 5px;
+    bottom: 2px;
 }
 
 @media screen and (prefers-reduced-motion:reduce) {

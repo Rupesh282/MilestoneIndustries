@@ -147,7 +147,7 @@ Theme Description ------------------------------------------------- Theme Name: 
 .boxed-btn {
     position: absolute;
     left: 1150px;
-    bottom: 15px;
+    bottom: 10px;
     background: #fff;
     color: #14435c !important;
     display: inline-block;
@@ -9623,7 +9623,7 @@ del {
     pointer-events: none;
     color: #aaa;
     right: 210px;
-    bottom: 5px;
+    bottom: 3px;
 }
 
 }
