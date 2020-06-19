@@ -146,13 +146,13 @@ Theme Description ------------------------------------------------- Theme Name: 
 
 .boxed-btn {
     position: absolute;
-    left: 1330px;
-    bottom: 20px;
+    left: 1300px;
+    bottom: 15px;
     background: #fff;
     color: #14435c !important;
     display: inline-block;
     padding: 5px 5px;
-    margin-right: 20px;
+    margin-right: 10px;
     /*margin-left: 90px;*/
     font-family: "Roboto", sans-serif;
     border-radius: 6px;
@@ -165,6 +165,7 @@ Theme Description ------------------------------------------------- Theme Name: 
     color: #14435c;
     text-transform: uppercase;
     cursor: pointer;
+    width: 120px;
 }
 
 
@@ -9606,7 +9607,6 @@ del {
 }
 .has-search .form-control {
     padding-left: 2.375rem;
-    margin-left: 190px;
     /*position: fixed;*/
     /*right:30px;*/
     /*left:1090px;*/
@@ -9622,6 +9622,10 @@ del {
     text-align: center;
     pointer-events: none;
     color: #aaa;
+    right: 180px;
+    bottom: 5px;
+}
+
 }
 .marquee {
     width: 80vw;
@@ -9641,7 +9645,6 @@ del {
     0% {
         transform: translate(100%, 0);
     }
-    
     100% {
         transform: translate(-100%, 0);
     }
@@ -9655,9 +9658,12 @@ del {
 .child {
     margin: auto;
     /* Magic! */
-    
     max-width: 100%;
     max-height: 100%;
 }
+
+/* .header-area {
+    text-transform: capitalize;
+} */
 
 /*# sourceMappingURL=style.css.map
