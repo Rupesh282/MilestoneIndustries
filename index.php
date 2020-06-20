@@ -44,61 +44,60 @@ include("header.html");
         <div class="slider-area ">
             <div class="slider-active ">
                 <!-- Single Slider -->
-                <div class="single-slider slider-height d-flex align-items-center ">
-                    <div class="container ">
+                <div class="single-slider slider-height d-flex align-items-center " style="background-image: url(/assets/img/hero/Banner_1.jpg);background-repeat: no-repeat;background-position: center center;">
+                    <!-- <div class="container ">
                         <div class="row ">
                             <div class="col-xl-8 col-lg-7 col-md-8 ">
                                 <div class="hero__caption ">
                                     <span data-animation="fadeInLeft " data-delay=".1s ">Some data goes here</span>
                                     <h1 data-animation="fadeInLeft " data-delay=".5s ">Lorem Ipsum</h1>
                                     <p data-animation="fadeInLeft " data-delay=".9s ">Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate<br> velit esscillumlore eu quife nrulla parihatur.</p>
-                                    <!-- Hero-btn -->
-                                    <!-- <div class="hero__btn " data-animation="fadeInLeft " data-delay="1.1s ">
+                                    Hero-btn
+                                    <div class="hero__btn " data-animation="fadeInLeft " data-delay="1.1s ">
                                         <a href="industries.html " class="btn hero-btn ">Our Services</a>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Single Slider -->
-                <div class="single-slider slider-height d-flex align-items-center ">
-                    <div class="container ">
+                <div class="single-slider slider-height d-flex align-items-center " style="background-image: url(/assets/img/hero/Banner_2.jpg);background-repeat: no-repeat;background-position: center center;">
+                    <!-- <div class="container ">
                         <div class="row ">
                             <div class="col-xl-8 col-lg-7 col-md-8 ">
                                 <div class="hero__caption ">
                                     <span data-animation="fadeInLeft " data-delay=".1s ">Hi</span>
                                     <h1 data-animation="fadeInLeft " data-delay=".5s ">Sample Data</h1>
                                     <p data-animation="fadeInLeft " data-delay=".9s ">Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate<br> velit esscillumlore eu quife nrulla parihatur.</p>
-                                    <!-- Hero-btn -->
-                                    <!-- <div class="hero__btn " data-animation="fadeInLeft " data-delay="1.1s ">
+                                    Hero-btn
+                                    <div class="hero__btn " data-animation="fadeInLeft " data-delay="1.1s ">
                                         <a href="industries.html " class="btn hero-btn ">Our Services</a>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
         <!-- slider Area End-->
         <!--? Categories Area Start -->
-        <div class="categories-area section-padding20 ">
+        <div class="categories-area section-padding-new ">
             <div class="container ">
                 <div class="row ">
                     <div class="col-lg-12 ">
                         <!-- Section Tittle -->
-                        <div class="section-tittle mb-70 ">
-                            <span>Our Top Products</span>
+                        <div class="section-tittle mb-20 ">
                             <h2>Our Best Products</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row ">
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -113,12 +112,12 @@ include("header.html");
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-result "></span>
                             </div> -->
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -131,12 +130,12 @@ include("header.html");
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-team "></span>
                             </div> -->
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -149,12 +148,12 @@ include("header.html");
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-team "></span>
                             </div> -->
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -169,9 +168,9 @@ include("header.html");
                 </div>
                 <div class="row ">
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -186,12 +185,12 @@ include("header.html");
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-result "></span>
                             </div> -->
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -204,12 +203,12 @@ include("header.html");
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-team "></span>
                             </div> -->
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -222,12 +221,12 @@ include("header.html");
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-50 ">
+                        <div class="single-cat text-center mb-10">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-team "></span>
                             </div> -->
                             <div class="cat-cap ">
-                                <div class="single-team mb-30 ">
+                                <div class="single-team ">
                                     <div class="team-img ">
                                         <img src="assets/img/gallery/team2.png " alt=" ">
                                     </div>
@@ -246,14 +245,13 @@ include("header.html");
         <!--? About Area Start-->
         <!-- About Area End-->
         <!--? Services Ara Start -->
-        <div class="services-area section-padding3 ">
+        <div class="services-area section-padding-new ">
             <div class="container ">
                 <div class="row ">
-                    <div class="cl-xl-7 col-lg-8 col-md-10 ">
+                    <div class="cl-xl-7 col-lg-12 col-md-10 ">
                         <!-- Section Tittle -->
-                        <div class="section-tittle mb-70 ">
-                            <span>Our Best Services</span>
-                            <h2>Top services that we provide</h2>
+                        <div class="section-tittle mb-20 ">
+                            <h2>Our Best Services</h2>
                         </div>
                     </div>
                 </div>
