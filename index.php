@@ -95,7 +95,7 @@ include("header.html");
                     </div>
                 </div>
                 <div class="row ">
-                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="single-cat text-center mb-50 ">
                             <div class="cat-cap ">
                                 <div class="single-team mb-30 ">
@@ -112,7 +112,7 @@ include("header.html");
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="single-cat text-center mb-50 ">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-result "></span>
@@ -130,7 +130,7 @@ include("header.html");
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="single-cat text-center mb-50 ">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-team "></span>
@@ -148,9 +148,27 @@ include("header.html");
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
+                        <div class="single-cat text-center mb-50 ">
+                            <!-- <div class="cat-icon ">
+                                <span class="flaticon-team "></span>
+                            </div> -->
+                            <div class="cat-cap ">
+                                <div class="single-team mb-30 ">
+                                    <div class="team-img ">
+                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                    </div>
+                                    <div class="team-caption ">
+                                        <h3><a href="# ">Product</a></h3>
+                                        <span>H</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row ">
-                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="single-cat text-center mb-50 ">
                             <div class="cat-cap ">
                                 <div class="single-team mb-30 ">
@@ -167,7 +185,7 @@ include("header.html");
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="single-cat text-center mb-50 ">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-result "></span>
@@ -185,7 +203,7 @@ include("header.html");
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="single-cat text-center mb-50 ">
                             <!-- <div class="cat-icon ">
                                 <span class="flaticon-team "></span>
@@ -198,6 +216,24 @@ include("header.html");
                                     <div class="team-caption ">
                                         <h3><a href="# ">Product</a></h3>
                                         <span>F</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
+                        <div class="single-cat text-center mb-50 ">
+                            <!-- <div class="cat-icon ">
+                                <span class="flaticon-team "></span>
+                            </div> -->
+                            <div class="cat-cap ">
+                                <div class="single-team mb-30 ">
+                                    <div class="team-img ">
+                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                    </div>
+                                    <div class="team-caption ">
+                                        <h3><a href="# ">Product</a></h3>
+                                        <span>G</span>
                                     </div>
                                 </div>
                             </div>
