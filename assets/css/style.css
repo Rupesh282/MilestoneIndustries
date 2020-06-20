@@ -146,7 +146,7 @@ Theme Description ------------------------------------------------- Theme Name: 
 
 .boxed-btn {
     position: absolute;
-    left: 1200px;
+    left: 1100px;
     bottom: 10px;
     background: #fff;
     color: #14435c !important;
@@ -160,12 +160,12 @@ Theme Description ------------------------------------------------- Theme Name: 
     font-weight: 400;
     border: 0;
     border: 1px solid #14435c;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     text-align: center;
     color: #14435c;
     text-transform: uppercase;
     cursor: pointer;
-    width: 120px;
+    width: 220px;
 }
 
 
@@ -4433,7 +4433,7 @@ hero-btn {
 
 .main-header ul ul.submenu {
     position: absolute;
-    width: 100px;
+    width: 120px;
     background: #0d2d3e;
     left: 15px;
     top: 90%;
@@ -9676,7 +9676,7 @@ del {
     pointer-events: none;
     color: #aaa;
     right: 210px;
-    bottom: 3px;
+    bottom: -3px;
 }
 
 }
