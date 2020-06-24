@@ -100,14 +100,25 @@
                             </div> -->
                             <div class="sub-box">
                                 <div class="back-face">
-                                    <input type="email" name="email" placeholder="Your Email">
-                                    <button>Submit</button>
+                                    <!-- 
+                                            <input type="email" name="email" placeholder="Your Email">
+                                            <button>Submit</button>
+                                    -->
+                                        <form  id="emailform" action="backend/email_subscribe.php" method="POST" class="subscribe_form relative mail_part " novalidate="true">
+                                            <input type="email " id="email"  placeholder=" Email Address " class="placeholder hide-on-focus " onfocus="this.placeholder='' " onblur="this.placeholder='Your email address' ">
+                                                <button type="submit" name="submit " id="submit" >
+                                                  submit 
+                                                </button>
+                                        </form>
+                                        <!-- status will be displayed here -->
+                                        <br>
+                                        <p id="status" style="color:white"></p>
+
                                 </div>
                                 <div class="front-face">
                                     <p>Subscribe for updates</p>
                                 </div>
-                            </div>
-
+                            </div> 
                         </div>
                     </div>
                 </div>
