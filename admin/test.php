@@ -17,22 +17,26 @@
 
 
 <?php
+    
+    require_once 'loginfo.php' ;
+    $PATH = "rupesh";
 
         /*
          * THIS FILE IS FOR TESTING PURPOSE , NOT INVOLVED IN PROJECT
          */
 
-    $PrFile = '../../rn/trial/products/Lenovolaptop';
-    $json_file_path = $PrFile.'/info.json';
+/*
+ *    $PrFile = '../../rn/trial/products/Lenovolaptop';
+ *    $json_file_path = $PrFile.'/info.json';
+ *
+ *    $jsondata = file_get_contents($json_file_path);
+ *    $array = json_decode($jsondata , true);
+ *
+ *
+ *    echo $array['data']['name'];
+ *    echo $array['data']['age'];
+ */
 
-    $jsondata = file_get_contents($json_file_path);
-    $array = json_decode($jsondata , true);
-
-
-    echo $array['data']['name'];
-    echo $array['data']['age'];
-
-*/
 
 
     // if(mkdir("../../rn/trial/products/dummy" , 0744)) {
