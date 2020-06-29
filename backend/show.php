@@ -23,6 +23,10 @@
 </script>
 
 <?php
+
+    //NO USE OF THIS FILE NOW
+
+
     //create connection and fetch data of product from sql
     require_once "loginfo.php";
 

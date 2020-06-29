@@ -68,6 +68,9 @@
       }
     }
 </script>
+
+
+
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -127,10 +130,19 @@
                                         <ul>
                                             <li>
                                                 <div class="form-group has-search f-right ">
-                                                    <span class="fa fa-search form-control-feedback "></span>
-                                                    <!--<input type="text " class="form-control " placeholder="Search.. ">-->
-                                                    <input type="text " class="form-control " placeholder="Search.. ">
+                                                    <form>
+                                                        <span class="fas fa-search "></span>
+                                                        <!--<input type="text" placeholder="Search.." class="srch-control">-->
+                                                        <input type="text "  name="search" class="srch-control myInput" placeholder="Search here ..." onkeydown="searchq();" autocomplete="off">
+                                                    </form>
+                                                    <!--
+                                                        search results will be  displayed here 
+                                                    -->
+                                                    <!--<ul id="output" style="position:absolute;left:650px;top:100px">-->
+                                                    <!--</ul>-->
                                                 </div>
+                                                    <ul id="output" style="position:absolute;">
+                                                    </ul>
                                             </li>
                                         </ul>
                                     </nav>

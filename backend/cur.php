@@ -24,6 +24,9 @@ float:left;
     //rename this file as load_products.php
     //this file basically laods the products from database
 
+    //this is path to stored data of products (it json , images)
+    $path = "../../../rn/trial/products/";
+
     require_once "loginfo.php";
 
     //Connection
@@ -64,12 +67,14 @@ float:left;
                     //get the  extension of mainFrame files
                     $mainFramephoto = $row[$mainFrame];
 
-                    $urlOfproduct = "backend/show.php?productId=$productId";
+                    $urlOfproduct = "show.php?productId=$productId";
 
                     $imagepath = "";
-                    if(file_exists('../../../rn/trial/products/'.$productFile.'/photos/'.$mainFramephoto)) {
-                        $imagepath = '../../rn/trial/products/'.$productFile.'/photos/'.$mainFramephoto;
-                    } else $imagepath= '../../rn/trial/products/dummy/default.png';
+                    //this path is relative to index.php
+                    $relpath = "../../rn/trial/products/";
+                    if(file_exists($path.$productFile.'/photos/'.$mainFramephoto)) {
+                        $imagepath = $relpath.$productFile.'/photos/'.$mainFramephoto;
+                    } else $imagepath= $relpath.'dummy/default.png';
 
                     $output .= '<li class="service-list">
                         <img width=80px src='.$imagepath.' class="alignnone size-full wp-image-156">
