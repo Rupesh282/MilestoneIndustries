@@ -1,4 +1,9 @@
 <?php
+
+    /*
+     * THIS FILE IS FOR TESTING PURPOSE , NOT INVOLVED IN PROJECT
+     */
+
     session_start();
     /*
      *  for security reasons

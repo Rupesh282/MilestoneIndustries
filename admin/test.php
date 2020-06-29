@@ -18,7 +18,10 @@
 
 <?php
 
-/*
+        /*
+         * THIS FILE IS FOR TESTING PURPOSE , NOT INVOLVED IN PROJECT
+         */
+
     $PrFile = '../../rn/trial/products/Lenovolaptop';
     $json_file_path = $PrFile.'/info.json';
 
