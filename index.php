@@ -44,7 +44,7 @@
         <div class="slider-area ">
             <div class="slider-active ">
                 <!-- Single Slider -->
-                <div class="single-slider slider-height d-flex align-items-center " style="background-image: url(/assets/img/hero/Banner_1.jpg);background-repeat: no-repeat;background-position: center center;">
+                <div class="single-slider slider-height d-flex align-items-center " style="background: url(/assets/img/hero/Banner_1.jpg) no-repeat center center;">
                     <!-- <div class="container ">
                         <div class="row ">
                             <div class="col-xl-8 col-lg-7 col-md-8 ">

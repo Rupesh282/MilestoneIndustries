@@ -9661,25 +9661,28 @@ del {
 .switch-wrap {
     margin-bottom: 10px;
 }
-.has-search .form-control {
-    padding-left: 2.375rem;
-    /*position: fixed;*/
-    /*right:30px;*/
-    /*left:1090px;*/
+
+.srch-control{
+	border: 1px solid #aaa;
+	border-radius: 6px;
+	padding-left: 40px;
+	margin-bottom: 10px;
 }
-.has-search .form-control-feedback {
+
+.has-search span {
     position: absolute;
     z-index: 4;
     margin-left: 190px;
     display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
     text-align: center;
     pointer-events: none;
     color: #aaa;
     right: 210px;
-    bottom: -3px;
+    bottom: 15px;
+
 }
 
 }
