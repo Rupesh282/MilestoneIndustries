@@ -44,11 +44,11 @@ include("header.html");
 <?php
     
     //path to product file (json , images)
-    $path = '../../rn/trial/products/';
+    //$path = '../../rn/trial/products/';
 
     //take contents here from data to show products
     //create connection and fetch data of product from sql
-    require_once "backend/loginfo.php";
+    require_once "loginfo.php";
 
     //Connection
     $conn = new mysqli($servername , $username , $password);
@@ -83,15 +83,15 @@ include("header.html");
 
 
     //first take mainFrame and set it on screeen
-    $image = $path.$productfile.'/photos/'.$mainframe;
+    $image = $PATH.'/'.$productfile.'/photos/'.$mainframe;
 
     //if main frame is not there , show a default image
-    if($mainFram=="" || !file_exits($image)) {
-        $image = $path.'dummy/default.png';
+    if($mainframe=="" || !file_exists($image)) {
+        $image = $PATH.'/'.'dummy/default.png';
     }
 
 
-    $jsonfile = $path.$productfile."/info.json";
+    $jsonfile = $PATH.'/'.$productfile."/info.json";
     $jsondata = file_get_contents($jsonfile);
     $array = json_decode($jsondata,true);
 

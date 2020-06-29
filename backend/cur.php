@@ -21,13 +21,13 @@ float:left;
 <?php
 
 
+    require_once "../loginfo.php";
     //rename this file as load_products.php
     //this file basically laods the products from database
 
     //this is path to stored data of products (it json , images)
-    $path = "../../../rn/trial/products/";
+    $path = '../'.$PATH;
 
-    require_once "loginfo.php";
 
     //Connection
     $conn = new mysqli($servername , $username , $password);
@@ -71,8 +71,8 @@ float:left;
 
                     $imagepath = "";
                     //this path is relative to index.php
-                    $relpath = "../../rn/trial/products/";
-                    if(file_exists($path.$productFile.'/photos/'.$mainFramephoto)) {
+                    $relpath = $PATH.'/';
+                    if(file_exists($path.'/'.$productFile.'/photos/'.$mainFramephoto)) {
                         $imagepath = $relpath.$productFile.'/photos/'.$mainFramephoto;
                     } else $imagepath= $relpath.'dummy/default.png';
 

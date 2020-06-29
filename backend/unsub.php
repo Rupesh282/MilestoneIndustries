@@ -2,7 +2,7 @@
         
 
     //login info for mysql
-    require_once "loginfo.php";
+    require_once "../loginfo.php";
 
     //get email by GET method
     $emaild = $_GET['email'];

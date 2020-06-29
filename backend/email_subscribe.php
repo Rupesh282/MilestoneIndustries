@@ -1,7 +1,7 @@
 <?php
 
     //for mySql
-    require_once "loginfo.php";
+    require_once "../loginfo.php";
 
     //Connection
     $conn = new mysqli($servername , $username , $password);
