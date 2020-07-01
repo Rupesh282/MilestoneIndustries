@@ -291,29 +291,29 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <!-- Counter Up -->
                         <div class="single-counter text-center">
-                            <span class="counter">8705</span>
-                            <p>Label A</p>
+                            <span class="counter">8</span>
+                            <p>Exporting Countries</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <!-- Counter Up -->
                         <div class="single-counter active text-center">
-                            <span class="counter">480</span>
-                            <p>Label B</p>
+                            <span class="counter">300</span><span>+</span>
+                            <p>Total Products</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <!-- Counter Up -->
                         <div class="single-counter text-center">
-                            <span class="counter">626</span>
-                            <p>Label C</p>
+                            <span class="counter">12</span><span>+</span>
+                            <p>Categories of Product</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <!-- Counter Up -->
                         <div class="single-counter text-center">
-                            <span class="counter">9774</span>
-                            <p>Label D</p>
+                            <span class="counter">20</span><span>+</span>
+                            <p>Years of experience</p>
                         </div>
                     </div>
                 </div>

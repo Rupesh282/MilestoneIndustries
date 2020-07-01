@@ -5263,6 +5263,7 @@ hero-btn {
 /* line 1, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_count_down.scss */
 .count-down-area {
     margin-top: -60px;
+    background: #f7f7f7;
 }
 
 /* line 3, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_count_down.scss */
@@ -5311,7 +5312,7 @@ hero-btn {
     font-family: "Roboto", sans-serif;
     line-height: 1;
     margin-bottom: 12px;
-    display: block;
+    /* display: block; */
 }
 
 /* line 40, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_count_down.scss */
@@ -5320,7 +5321,7 @@ hero-btn {
     color: #737980;
     line-height: 1;
     margin: 0;
-    padding: 0;
+    padding: 30px;
 }
 
 /* line 1, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
@@ -7977,28 +7978,24 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
     font-weight: 600;
     margin-bottom: 20px;
 }
-
 .contact-title {
     font-size: 27px;
     font-weight: 600;
     margin-bottom: 20px;
 }
-
-.form-contact .form-msg textarea{
+.form-contact .form-msg textarea {
     width: 800px;
     height: 300px;
     border-radius: 8px;
 }
-
-.form-contact .form-name input{
+.form-contact .form-name input {
     width: 380px;
     height: 50px;
     border-radius: 5px;
     box-shadow: none;
     border: solid 1px #000;
 }
-
-.form-contact .form-email input{
+.form-contact .form-email input {
     margin-left: 10px;
     width: 390px;
     height: 50px;
@@ -8006,8 +8003,7 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
     box-shadow: none;
     border: solid 1px #000;
 }
-
-.form-contact .form-subject input{
+.form-contact .form-subject input {
     margin-top: 10px;
     width: 800px;
     height: 50px;
@@ -9661,14 +9657,12 @@ del {
 .switch-wrap {
     margin-bottom: 10px;
 }
-
-.srch-control{
-	border: 1px solid #aaa;
-	border-radius: 6px;
-	padding-left: 40px;
-	margin-bottom: 10px;
+.srch-control {
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding-left: 40px;
+    margin-bottom: 10px;
 }
-
 .has-search span {
     position: absolute;
     z-index: 4;
@@ -9682,7 +9676,6 @@ del {
     color: #aaa;
     right: 210px;
     bottom: 30px;
-
 }
 
 }
