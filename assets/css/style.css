@@ -5515,7 +5515,8 @@ hero-btn {
 
 /* line 6, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_team.scss */
 .single-team .team-img img {
-    width: 80%;
+    width: 120px;
+    height: 140px;
     /* padding-left: 60px; */
     
     transform: scale(1);
@@ -5524,7 +5525,7 @@ hero-btn {
 
 /* line 12, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_team.scss */
 .team-area .single-team .team-caption {
-    padding: 20px 20px 20px 50px;
+    padding: 20px 20px 5px 20px;
     background: #fff;
 }
 
@@ -5537,7 +5538,7 @@ hero-btn {
     display: block;
     position: relative;
     margin-left: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 /* line 24, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_team.scss */

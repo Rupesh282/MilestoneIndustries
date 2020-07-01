@@ -99,11 +99,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p1.png " alt=" ">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>A</span>
+                                        <h3><a href="# ">Mixer Grinder</a></h3>
+                                        <!-- <span>A</span> -->
                                     </div>
                                 </div>
                                 <!-- <h5><a href="services.html ">Strategy Planning </a></h5>
@@ -119,11 +119,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p2.png " alt=" " style="width: 50px;">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>B</span>
+                                        <h3><a href="# ">Hand Blender</a></h3>
+                                        <!-- <span>B</span> -->
                                     </div>
                                 </div>
                             </div>
@@ -137,11 +137,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p3.png " alt=" ">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>C</span>
+                                        <h3><a href="# ">Juicer</a></h3>
+                                        <!-- <span>C</span> -->
                                     </div>
                                 </div>
                             </div>
@@ -155,11 +155,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p4.png " alt=" " style="width:50px">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>H</span>
+                                        <h3><a href="# ">Tower Fan</a></h3>
+                                        <!-- <span>H</span> -->
                                     </div>
                                 </div>
                             </div>
@@ -172,11 +172,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p5.png " alt=" " style="width:140px;">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>D</span>
+                                        <h3><a href="# ">Pressure Cooker</a></h3>
+                                        <!-- <span>D</span> -->
                                     </div>
                                 </div>
                                 <!-- <h5><a href="services.html ">Strategy Planning </a></h5>
@@ -192,11 +192,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p6.jpg " alt=" ">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>E</span>
+                                        <h3><a href="# ">Non Stick Cookware</a></h3>
+                                        <!-- <span>E</span> -->
                                     </div>
                                 </div>
                             </div>
@@ -210,11 +210,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p7.png " alt=" " style="width: 150px;">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>F</span>
+                                        <h3><a href="# ">Stainless&nbsp;Steel&nbsp;Kitchenware</a></h3>
+                                        <!-- <span>F</span> -->
                                     </div>
                                 </div>
                             </div>
@@ -228,11 +228,11 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/team2.png " alt=" ">
+                                        <img src="assets/img/gallery/p8.png " alt=" " style="width:180px;">
                                     </div>
                                     <div class="team-caption ">
-                                        <h3><a href="# ">Product</a></h3>
-                                        <span>G</span>
+                                        <h3><a href="# ">Gas Stove</a></h3>
+                                        <!-- <span>G</span> -->
                                     </div>
                                 </div>
                             </div>
