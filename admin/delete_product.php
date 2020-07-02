@@ -84,7 +84,7 @@
     //all products files are present here
     //$Ppath = '../../rn/trial/products/';
 
-    $filePath = $PATH.'/'.$productFile.'/';
+    $filePath = $rPATH.'/'.$productFile.'/';
 
     //now we will delete files
     //remove the photos of corresponding product , and delete its directory

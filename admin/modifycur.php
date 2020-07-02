@@ -83,9 +83,9 @@
 
                     // check if file is there in the folder
                     $imagepath = "";
-                    if(file_exists( $PATH.'/'.$productFile.'/photos/'.$mainFramephoto)) {
-                        $imagepath = $PATH.'/'.$productFile.'/photos/'.$mainFramephoto;
-                    } else $imagepath= $PATH.'/dummy/default.png';
+                    if(file_exists( $rPATH.'/'.$productFile.'/photos/'.$mainFramephoto)) {
+                        $imagepath = $rPATH.'/'.$productFile.'/photos/'.$mainFramephoto;
+                    } else $imagepath= $rPATH.'/dummy/default.png';
 
                     $output .= '<li class="service-list">
                         <img width=79px src='.$imagepath.' class="alignnone size-full wp-image-156">

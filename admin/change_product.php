@@ -113,7 +113,7 @@
      //also get the name of mainFrame image from database
      $mainimage = $row[$mainFrame];
 
-     $jsonfile = $PATH.'/'.$productFile.'/info.json';
+     $jsonfile = $rPATH.'/'.$productFile.'/info.json';
      $jsondata = file_get_contents($jsonfile);
      $array = json_decode($jsondata , true);
 
@@ -220,7 +220,7 @@
 <?php
 
         //This section shows the admin the images currently available for display
-        $imagespath =$PATH.'/'.$productFile."/photos/";
+        $imagespath =$rPATH.'/'.$productFile."/photos/";
 
         $files = glob($imagespath."*.*");
 
