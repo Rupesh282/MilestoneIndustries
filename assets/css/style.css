@@ -4433,7 +4433,7 @@ hero-btn {
 
 /* line 109, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 
-.main-header ul ul.submenu {
+.main-header .main-menu ul ul.submenu {
     position: absolute;
     width: 120px;
     background: #0d2d3e;
@@ -4645,6 +4645,7 @@ hero-btn {
 .mobile_menu .slicknav_menu .slicknav_nav a {
     font-size: 15px;
     padding: 7px 10px;
+    color: black;
 }
 
 /* line 245, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
