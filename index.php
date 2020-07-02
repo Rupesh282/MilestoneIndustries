@@ -285,31 +285,31 @@
         <!--? Testimonial Start -->
         <!-- Testimonial End -->
         <!-- Coun Down Start -->
-        <div class="count-down-area pb-120">
+        <div class="count-down-area section-padding-new">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-6">
                         <!-- Counter Up -->
                         <div class="single-counter text-center">
                             <span class="counter">8</span>
                             <p>Exporting Countries</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-6">
                         <!-- Counter Up -->
                         <div class="single-counter active text-center">
                             <span class="counter">300</span><span>+</span>
                             <p>Total Products</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-6">
                         <!-- Counter Up -->
                         <div class="single-counter text-center">
                             <span class="counter">12</span><span>+</span>
-                            <p>Categories of Product</p>
+                            <p>Categories&nbsp;of&nbsp;Product</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-6">
                         <!-- Counter Up -->
                         <div class="single-counter text-center">
                             <span class="counter">20</span><span>+</span>
@@ -327,7 +327,7 @@
         <!-- Blog Area Start -->
         <!-- Blog Area End -->
         <!-- Brand Area Start -->
-        <div class="brand-area pb-140 ">
+        <div class="brand-area section-padding-new">
             <div class="container ">
                 <div class="brand-active brand-border pb-40 ">
                     <div class="single-brand ">

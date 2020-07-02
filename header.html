@@ -7,65 +7,85 @@
 
 <!--for search box-->
 <style>
-#myInput {
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-
-#output {
-  /* Remove default list styling */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#output li a {
-  border: 1px solid #ddd; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
-  color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */
-}
-
-#output li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
-}
+    #myInput {
+        background-position: 10px 12px;
+        /* Position the search icon */
+        background-repeat: no-repeat;
+        /* Do not repeat the icon image */
+        width: 100%;
+        /* Full-width */
+        font-size: 16px;
+        /* Increase font-size */
+        padding: 12px 20px 12px 40px;
+        /* Add some padding */
+        border: 1px solid #ddd;
+        /* Add a grey border */
+        margin-bottom: 12px;
+        /* Add some space below the input */
+    }
+    
+    #output {
+        /* Remove default list styling */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #output li a {
+        border: 1px solid #ddd;
+        /* Add a border to all links */
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        /* Grey background color */
+        padding: 12px;
+        /* Add some padding */
+        text-decoration: none;
+        /* Remove default text underline */
+        font-size: 18px;
+        /* Increase the font-size */
+        color: black;
+        /* Add a black text color */
+        display: block;
+        /* Make it into a block element to fill the whole list */
+    }
+    
+    #output li a:hover:not(.header) {
+        background-color: #eee;
+        /* Add a hover effect to all links, except for headers */
+    }
 </style>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-      $("#submit").click(function(e){
-        e.preventDefault();
-        var email = $("#email").val();
-        $.ajax({
-            type: "POST",
-            url: "backend/email_subscribe.php",
-            dataType: "json",
-            data: {email:email},
-            success : function(data){
-                $("#status").html(data);
-            }
+    $(document).ready(function() {
+        $("#submit").click(function(e) {
+            e.preventDefault();
+            var email = $("#email").val();
+            $.ajax({
+                type: "POST",
+                url: "backend/email_subscribe.php",
+                dataType: "json",
+                data: {
+                    email: email
+                },
+                success: function(data) {
+                    $("#status").html(data);
+                }
+            });
         });
-      });
-   });
+    });
 
-  function searchq() {
-      var searchTxt = $("input[name='search']").val();
-      if(searchTxt == '') {
-          $("#output").html('');
-      } else {
-          $.post("backend/cur.php", {searchVal: searchTxt}, function(output) {
-              $("#output").html(output);
-          });
-      }
+    function searchq() {
+        var searchTxt = $("input[name='search']").val();
+        if (searchTxt == '') {
+            $("#output").html('');
+        } else {
+            $.post("backend/cur.php", {
+                searchVal: searchTxt
+            }, function(output) {
+                $("#output").html(output);
+            });
+        }
     }
 </script>
 
@@ -101,17 +121,17 @@
                 <div class="container">
                     <div class="row align-items-center" style="flex-wrap: nowrap;">
                         <!-- Logo -->
-                        <div class=" col-xl-3 col-lg-3 ">
+                        <div class=" col-xl-3 col-lg-3 col-6">
                             <div class=" logo ">
-                                <a href="index.php"><img src="assets/img/logo/logo.png " alt=" " style="padding-top: 20px; padding-right: 0px; " width="275"></a>
+                                <a href="index.php"><img src="assets/img/logo/logo.png " alt=" " style="padding-top: 20px; padding-right: 0px;"></a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 ">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="menu-wrapper d-flex align-items-center justify-content-end ">
                                 <!-- Main-menu -->
-                                <div class="main-menu d-none d-lg-block ">
+                                <div class="main-menu d-none d-md-block ">
                                     <nav>
-                                        <ul style="white-space: nowrap; right: 100px;bottom: -10px;position: absolute;">
+                                        <ul class="tagline" style="white-space: nowrap; right: 100px;bottom: -10px;position: absolute;">
                                             <li><a>EXPORTS</a></li>
                                             <li>|</li>
                                             <li><a>DISTRIBUTION</a></li>
@@ -122,29 +142,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class=" col-xl-3 col-lg-3 " style="flex-wrap: nowrap; ">
+                        <div class=" col-xl-3 col-lg-3 col-6" style="flex-wrap: nowrap; ">
                             <div class="menu-wrapper d-flex align-items-center justify-content-end ">
                                 <!-- Main-menu -->
-                                <div class="main-menu d-none d-lg-block " style="">
-                                    <nav>
-                                        <ul>
-                                            <li>
-                                                <div class="form-group has-search f-right ">
-                                                    <form>
-                                                        <span class="fas fa-search "></span>
-                                                        <!--<input type="text" placeholder="Search.." class="srch-control">-->
-                                                        <input type="text "  name="search" class="srch-control myInput" placeholder="Search here ..." onkeydown="searchq();" autocomplete="off">
-                                                    </form>
-                                                </div>
-                                                    <!--
+                                <!-- <div class="main-menu d-none d-lg-block "> -->
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <div class="form-group has-search f-right ">
+                                                <form>
+                                                    <span class="fas fa-search "></span>
+                                                    <!--<input type="text" placeholder="Search.." class="srch-control">-->
+                                                    <input type="text " name="search" class="srch-control myInput" placeholder="Search here ..." onkeydown="searchq();" autocomplete="off">
+                                                </form>
+                                            </div>
+                                            <!--
                                                         search results will be  displayed here 
                                                     -->
-                                                    <ul id="output" style="position:absolute;">
-                                                    </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
+                                            <ul id="output" style="position:absolute;">
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
@@ -201,7 +221,7 @@
                             <ul>
                                 <li>
 
-                                    <div id="google_translate_element" class="boxed-btn f-right "></div>
+                                    <div id="google_translate_element" class="boxed-btn f-right d-none d-sm-block"></div>
 
                                     <script type="text/javascript">
                                         function googleTranslateElementInit() {

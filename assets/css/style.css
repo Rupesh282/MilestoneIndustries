@@ -4655,7 +4655,7 @@ hero-btn {
 
 /* line 1, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
 .slider-height {
-    height: 900px;
+    height: 810px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* line 1, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
@@ -5270,7 +5270,7 @@ hero-btn {
 /* line 3, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_count_down.scss */
 .count-down-area .single-counter {
     background: #fff;
-    padding: 44px 10px 44px 9px;
+    padding: 15px 5px 10px 4px;
     border: 1px solid #cfcfcf;
     margin-bottom: 30px;
 }
@@ -5303,6 +5303,7 @@ hero-btn {
 /* line 26, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_count_down.scss */
 .count-down-area .single-counter.active p {
     color: #fff;
+    white-space: nowrap;
 }
 
 /* line 31, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_count_down.scss */
@@ -5312,7 +5313,7 @@ hero-btn {
     font-weight: 400;
     font-family: "Roboto", sans-serif;
     line-height: 1;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     /* display: block; */
 }
 
@@ -9718,6 +9719,21 @@ del {
 .section-padding-new {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+div.logo a img {
+    width: 275px;
+}
+@media screen and (max-width: 600px) {
+    ul.tagline {
+        visibility: hidden;
+    }
+    .col-xl-6,
+    .col-lg-6 {
+        padding: 0px 0px;
+    }
+    div.logo a img {
+        width: 200px;
+    }
 }
 
 /* .header-area {
