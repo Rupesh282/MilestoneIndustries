@@ -97,7 +97,7 @@
 
         //create filename for product using product name (trip out all white space present in name)
 
-        $PrFile = $PATH.'/'.str_replace(' ', '', $PrName);
+        $PrFile = $rPATH.'/'.str_replace(' ', '', $PrName);
 
         echo $PrFile;
 

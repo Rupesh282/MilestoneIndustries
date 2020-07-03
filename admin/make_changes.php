@@ -104,7 +104,7 @@
 
         //create filename for product using product name (trip out all white space present in name)
 
-        $PrFile = $PATH.'/'.str_replace(' ', '', $PrName);
+        $PrFile = $rPATH.'/'.str_replace(' ', '', $PrName);
 
         echo $PrFile;
         echo '<br>';
@@ -120,7 +120,7 @@
         
         $row = mysqli_fetch_array($res);
 
-        $pastFileName = $PATH.'/'.$row[$product_file];
+        $pastFileName = $rPATH.'/'.$row[$product_file];
         $newFileName = $PrFile;
 
 

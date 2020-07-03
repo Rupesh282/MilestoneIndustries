@@ -2,6 +2,8 @@
 <html class="no-js" lang="zxx">
 
 <head>
+    <base href="/Milstone/MilestoneIndustries/index.php">
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Business HTML-5 Template </title>
