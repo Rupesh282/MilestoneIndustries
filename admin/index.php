@@ -24,6 +24,7 @@
         </header>
         <hr>
         <center>
+        	<a href="index.php"><img src="../assets/img/logo/logo.png" alt=" " style="padding-top: 20px; padding-right: 0px;"></a>
            <div class="form1">
             <br>
                <div style="width:400px">
