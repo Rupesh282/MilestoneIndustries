@@ -4397,9 +4397,9 @@ hero-btn {
 .main-header .main-menu ul li a {
     color: #0d2d3e;
     font-weight: 900;
-    padding: 8px 18px;
+    padding: 5px 15px;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -5270,7 +5270,7 @@ hero-btn {
 /* line 3, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_count_down.scss */
 .count-down-area .single-counter {
     background: #fff;
-    padding: 15px 5px 10px 4px;
+    padding: 30px 5px 5px 5px;
     border: 1px solid #cfcfcf;
     margin-bottom: 30px;
 }
@@ -9721,7 +9721,7 @@ del {
     padding-bottom: 20px;
 }
 div.logo a img {
-    width: 275px;
+    width: 250px;
 }
 @media screen and (max-width: 600px) {
     ul.tagline {
@@ -9734,6 +9734,46 @@ div.logo a img {
     div.logo a img {
         width: 200px;
     }
+    .has-search span {
+        right: 230px;
+    }
+    .mobile_menu {
+        padding-top: 15px;
+        padding-right: 30px;
+    }
+    .form-contact .form-msg textarea {
+        width: 400px;
+        height: 200px;
+        margin-left: 50px;
+    }
+    .form-contact .form-name input {
+        width: 400px;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .form-contact .form-email input {
+        margin-top: 10px;
+        width: 400px;
+        margin-left: 50px;
+    }
+    .form-contact .form-subject input {
+        width: 400px;
+        margin-left: 50px;
+    }
+    .contact-title {
+        margin-left: 50px;
+    }
+    .form-group .button {
+        margin-left: 50px;
+    }
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky+.content {
+    padding-top: 60px;
 }
 
 .login_admin{
