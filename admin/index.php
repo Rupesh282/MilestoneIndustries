@@ -6,6 +6,7 @@
         </title>
         <!-- All boostrap crap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,13 +19,16 @@
         <header>
                 <center>
                     <div class="jumbotron">
-                       <h1>Milestone Admin Login</h1> 
+                       <h1>Admin Login</h1> 
                     </div>
                 </center>
         </header>
         <hr>
+
         <center>
-        	<a href="index.php"><img src="../assets/img/logo/logo.png" alt=" " style="padding-top: 20px; padding-right: 0px;"></a>
+            <div class="login_admin">
+            <img src="./../assets/img/logo/logo.png" alt=" " style="padding-top: 20px; padding-right: 0px;">
+
            <div class="form1">
             <br>
                <div style="width:400px">
@@ -32,9 +36,15 @@
                     <form action="manage.php" method="POST" autocomplete="off">
                             <input  type="text" class="form-control" name = "username" placeholder="Username"><br><br>
                             <input  type="password" class="form-control" name="password" placeholder="Password"><br><br>
-                            <input  type="submit" class="btn btn-success" name="submit" value="Log In">
+                            <input  type="submit" class="boxed-btn-login" name="submit" value="Log In">
                     </form>
                </div>
+               <a href="#">Forgot Password</a> 
+               <a href="../index.php">Back to Home</a>
+           </div>
+        	<?php 
+        	
+               ?>
                 <h3>
                     <?php
                         $status = $_GET['status'];

@@ -48,15 +48,18 @@
 <style>
     .panel {
         position:absolute;
-        left:550px;
+        left:450px;
         width:500px;
     }
     #btn {
         margin:50px;
-        width:600px;
+        width:190px;
         height:60px;
     }
 </style>
+<center>
+<img src="./../assets/img/logo/logo.png" alt=" " style="padding-top: 20px; padding-right: 0px; margin-left: 50px;">
+
 
 <?php 
     
@@ -74,3 +77,4 @@
             </form>
           </div>';
 ?>
+</center>
