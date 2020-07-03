@@ -40,70 +40,27 @@
 include("header.html");
 ?>
 <main>
-<section class="blog_area section-padding">
-            <div class="container">
-                <div class="row">
-                        <div class="col-lg-4 mb-5 mb-lg-0">
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="" style="width: 250px;height:250px">
-                                </div>
-                        </div>
-                        <div class="col-lg-5 mb-5 mb-lg-0">
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="blog_details.html">
-                                        <h2>Product Name</h2>
-                                    </a>
-                                    <p>Sample Content</p>
-                                </div>
-                            </article>
-                        </div>
-                    <div class="col-lg-3">
-                        <div class="blog_right_sidebar">
-                            <aside class="single_sidebar_widget post_category_widget">
-                                <h4 class="widget_title">Sample Menu</h4>
-                                <ul class="unordered-list">
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>A</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>B</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>C</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>D</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>E</p>
-                                        </a>
-                                        <ul>
-                                            <li>Sub Item</li>
-                                            <li>Sub Item</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>F</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </aside>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="search-list">
+        <div class="row">
+        <ul>
+            <li>
+                    <img src="assets/img/blog/single_blog_1.png">
+                    <h3>[Product 1]</h3>
+                    <p>[Brand]</p>
+                    <span>[category]</span>
+                
+            </li>
+             <li>
+                 <img src="assets/img/blog/single_blog_1.png">
+                    <h3>[Product 2]</h3>
+                    <p>[Brand]</p>
+                    <span>[category]</span>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+         
 </main>
 <?php
 include("footer.html");
