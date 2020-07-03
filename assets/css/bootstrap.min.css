@@ -9316,5 +9316,15 @@ a.text-dark:hover {
     }
 }
 
+.col-xs-0,
+.col-sm-0,
+.col-md-0,
+.col-lg-0 {
+    flex: 0 0 0;
+    max-width: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
 
 /*# sourceMappingURL=bootstrap.min.css.map */
