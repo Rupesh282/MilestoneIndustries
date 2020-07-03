@@ -44,41 +44,19 @@ include("header.html");
             <div class="container">
                 <div class="row">
                         <div class="col-lg-4 mb-5 mb-lg-0">
-                                <div class="prod_img">
-                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="" style="width: 300px;height:300px">
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="" style="width: 250px;height:250px">
                                 </div>
                         </div>
                         <div class="col-lg-5 mb-5 mb-lg-0">
-                                <div class="prod-details">
-                                    <div class="prod-title">
-                                    <a class="d-inline-block" href="#">
-                                        <h4>Product Name</h4>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                        <h2>Product Name</h2>
                                     </a>
+                                    <p>Sample Content</p>
                                 </div>
-                                    <ul>
-                                        <li>Brand: <span>a</span></li>
-                                        <li>Grinder Type: <span>a</span></li>
-                                        <li>Model Name/No.: <span>a</span></li>
-                                        <li>Usage: <span>a</span></li>
-                                        <li>Wattage: <span>a</span></li>
-                                        <li>Color: <span>a</span></li>
-                                        <li>Place Of Origin: <span>a</span></li>
-                                        <li>No. of jars: <span>a</span></li>
-                                        <li>Voltage: <span>a</span></li>
-                                        <li>Warranty: <span>a</span></li>
-                                        <li>No. of Speed Settings: <span>a</span></li>
-                                        <li>Motor HP: <span>a</span></li>
-                                        <li>Housing: <span>a</span></li>
-                                        <li>Certification: <span>a</span></li>
-                                        <li>Dimensions: <span>a</span></li>
-                                        <li>Box Content: <span>a</span></li>
-                                        <li>Number Of Blades: <span>a</span></li>
-                                        <li>Body Shape: <span>a</span></li>
-                                        <li>Additional Info: <span>a</span></li>
-
-                                    </ul>
-                                    <!-- <p>Sample Content</p> -->
-                                </div>
+                            </article>
                         </div>
                     <div class="col-lg-3">
                         <div class="blog_right_sidebar">
@@ -126,164 +104,6 @@ include("header.html");
                 </div>
             </div>
         </section>
-         <div class="categories-area section-padding-new ">
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-lg-12 ">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle mb-20 ">
-                            <h2>Other Products</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p1.png " alt=" ">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Mixer Grinder</a></h3>
-                                        <!-- <span>A</span> -->
-                                    </div>
-                                </div>
-                                <!-- <h5><a href="services.html ">Strategy Planning </a></h5>
-                                <p>There are many variations of passages of lorem Ipsum available but the new majority have suffered.</p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <!-- <div class="cat-icon ">
-                                <span class="flaticon-result "></span>
-                            </div> -->
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p2.png " alt=" " style="width: 50px;">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Hand Blender</a></h3>
-                                        <!-- <span>B</span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <!-- <div class="cat-icon ">
-                                <span class="flaticon-team "></span>
-                            </div> -->
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p3.png " alt=" ">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Juicer</a></h3>
-                                        <!-- <span>C</span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <!-- <div class="cat-icon ">
-                                <span class="flaticon-team "></span>
-                            </div> -->
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p4.png " alt=" " style="width:50px">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Tower Fan</a></h3>
-                                        <!-- <span>H</span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p5.png " alt=" " style="width:140px;">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Pressure Cooker</a></h3>
-                                        <!-- <span>D</span> -->
-                                    </div>
-                                </div>
-                                <!-- <h5><a href="services.html ">Strategy Planning </a></h5>
-                                <p>There are many variations of passages of lorem Ipsum available but the new majority have suffered.</p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <!-- <div class="cat-icon ">
-                                <span class="flaticon-result "></span>
-                            </div> -->
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p6.jpg " alt=" ">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Non Stick Cookware</a></h3>
-                                        <!-- <span>E</span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <!-- <div class="cat-icon ">
-                                <span class="flaticon-team "></span>
-                            </div> -->
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p7.png " alt=" " style="width: 150px;">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Stainless&nbsp;Steel&nbsp;Kitchenware</a></h3>
-                                        <!-- <span>F</span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 ">
-                        <div class="single-cat text-center mb-10">
-                            <!-- <div class="cat-icon ">
-                                <span class="flaticon-team "></span>
-                            </div> -->
-                            <div class="cat-cap ">
-                                <div class="single-team ">
-                                    <div class="team-img ">
-                                        <img src="assets/img/gallery/p8.png " alt=" " style="width:180px;">
-                                    </div>
-                                    <div class="team-caption ">
-                                        <h3><a href="# ">Gas Stove</a></h3>
-                                        <!-- <span>G</span> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 </main>
 <?php
 include("footer.html");
