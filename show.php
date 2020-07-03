@@ -3,7 +3,9 @@
 
 <head>
     <!-- This is for url rewrite -->
-    <base href="/Milstone/MilestoneIndustries/show.php">
+    <!-- when using in local machine , use path to the assets folder here instaed of "/" from root directoryy i.e. /www/html/-->
+    <!-- ex : if your assets folder is /www/html/MilstoneIndustries/  the replace "/" by "/MilstoneIndustries/"-->
+    <base href="/"/>
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
