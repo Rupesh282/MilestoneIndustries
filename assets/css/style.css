@@ -9736,6 +9736,74 @@ div.logo a img {
     }
 }
 
+.login_admin{
+ 	width: 500px;
+ 	height: 500px;
+ 	border: 1px solid #9DA5AA;
+ 	margin-bottom: 60px;
+ 	border-radius: 10px;
+ 	/*box-shadow: */
+ 	background-color: #9DA5AA;
+}
+
+.login_admin a{
+	position: relative;
+	top: 50px;
+	margin-right: 40px;
+	padding-left: 20px;
+
+
+}
+
+.boxed-btn-login {
+    position: relative;
+    /*left: 1100p*/
+    /*bottom: 10px;*/
+    top: 20px;
+    background: #fff;
+    color: #14435c !important;
+    display: inline-block;
+    padding: 5px 5px;
+    margin-right: 10px;
+    /*margin-left: 90px;*/
+    font-family: "Roboto", sans-serif;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    border: 0;
+    border: 1px solid #14435c;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #14435c;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+}
+
+
+/* line 75, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_variables.scss */
+
+.boxed-btn-login:hover {
+    background: #14435c;
+    color: #fff !important;
+    border: 1px solid #14435c;
+}
+
+
+/* line 80, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_variables.scss */
+
+.boxed-btn-login:focus {
+    outline: none;
+}
+
+
+/* line 83, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_variables.scss */
+
+.boxed-btn-login .large-width {
+    width: 220px;
+}
+
 /* .header-area {
     text-transform: capitalize;
 } */
