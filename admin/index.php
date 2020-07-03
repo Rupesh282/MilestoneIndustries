@@ -28,6 +28,7 @@
         <center>
             <div class="login_admin">
             <img src="./../assets/img/logo/logo.png" alt=" " style="padding-top: 20px; padding-right: 0px;">
+
            <div class="form1">
             <br>
                <div style="width:400px">
