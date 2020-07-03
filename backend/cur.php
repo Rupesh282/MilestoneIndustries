@@ -67,7 +67,8 @@ float:left;
                     //get the  extension of mainFrame files
                     $mainFramephoto = $row[$mainFrame];
 
-                    $urlOfproduct = "show.php?productId=$productId";
+                    $urlOfproduct = "product/$productFile/$productId";
+                    //$urlOfproduct = "show.php?productId=$productId&productName=$nameOfproduct";
 
                     $imagepath = "";
                     //this path is relative to index.php

@@ -2,6 +2,9 @@
 <html class="no-js" lang="zxx">
 
 <head>
+    <!-- This is for url rewrite -->
+    <base href="/Milstone/MilestoneIndustries/show.php">
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Business HTML-5 Template </title>
