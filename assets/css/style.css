@@ -9666,9 +9666,10 @@ del {
 .srch-control {
     border: 1px solid #aaa;
     border-radius: 6px;
-    padding-left: 10%;
+    padding-left: 20%;
     margin-bottom: 10px;
     margin-top: 15%;
+    width: 85%;
 }
 .has-search span {
     position: absolute;
@@ -9683,8 +9684,6 @@ del {
     color: #aaa;
     right: 86%;
     bottom: 32.5%;
-}
-
 }
 .marquee {
     width: 80vw;
@@ -9704,6 +9703,7 @@ del {
     0% {
         transform: translate(100%, 0);
     }
+    
     100% {
         transform: translate(-100%, 0);
     }
@@ -9717,6 +9717,7 @@ del {
 .child {
     margin: auto;
     /* Magic! */
+    
     max-width: 100%;
     max-height: 100%;
 }
@@ -9725,64 +9726,74 @@ del {
     padding-bottom: 20px;
 }
 div.logo a img {
-    width: 250px;
+    width: 80%;
 }
 @media screen and (max-width: 600px) {
     ul.tagline {
         visibility: hidden;
     }
+    
     .col-xl-6,
     .col-lg-6 {
         padding: 0px 0px;
     }
-    div.logo a img {
-        width: 200px;
-    }
+    
     .has-search span {
-        right: 83.3%;
+        right: 80%;
         bottom: 37%;
     }
+    
     .mobile_menu {
         padding-top: 15px;
         padding-right: 30px;
     }
+    
     .form-contact .form-msg textarea {
         width: 80%;
         margin-left: 10%;
         height: 30%;
     }
+    
     .form-contact .form-name input {
         width: 80%;
         margin-left: 10%;
         margin-top: 10px;
     }
+    
     .form-contact .form-email input {
         margin-top: 10px;
         width: 80%;
         margin-left: 10%;
     }
+    
     .form-contact .form-subject input {
         width: 80%;
         margin-left: 10%;
     }
+    
     .contact-title {
         margin-left: 10%;
     }
+    
     .form-group .button {
         margin-left: 10%;
     }
+    
     .footer-area .footer-top .single-footer-caption .sub-box {
         bottom: 20%;
     }
+    
     .footer-area .footer-top .single-footer-caption .sub-box .front-face p {
         font-size: 150%;
         white-space: nowrap;
     }
+    
     .footer-area .footer-top .single-footer-caption .sub-box .back-face button {
         font-size: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    
     .footer-area .footer-bottom {
         padding-right: 5%;
         padding-left: 0%;
@@ -9803,6 +9814,7 @@ div.logo a img {
     margin-bottom: 60px;
     border-radius: 10px;
     /*box-shadow: */
+    
     background-color: #9DA5AA;
 }
 .login_admin a {
@@ -9815,6 +9827,7 @@ div.logo a img {
     position: relative;
     /*left: 1100p*/
     /*bottom: 10px;*/
+    
     top: 20px;
     background: #fff;
     color: #14435c !important;
@@ -9822,8 +9835,8 @@ div.logo a img {
     padding: 5px 5px;
     margin-right: 10px;
     /*margin-left: 90px;*/
-    font-family: "Roboto",
-    sans-serif;
+    
+    font-family: "Roboto", sans-serif;
     border-radius: 6px;
     font-size: 15px;
     font-weight: 400;
@@ -9877,6 +9890,7 @@ div.logo a img {
 }
 .prod-details ul li span {
     /*padding-left: 10px;*/
+    
     padding-right: 10px;
     float: right;
     color: #96989E;
