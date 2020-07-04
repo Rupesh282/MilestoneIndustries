@@ -1,12 +1,19 @@
 <!-- This are required for ajax-jqry to work -->
 <script src="jquery-3.5.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <!--This is ajax-jqry method to update page without refresh-->
 <!--used for email subscription-->
 
 <!--for search box-->
 <style>
+    #input {
+        width:500px;
+    }
+    .has-search .form-control {
+        padding-left: 2.375rem;
+    }
     #myInput {
         background-position: 10px 12px;
         /* Position the search icon */
@@ -77,17 +84,49 @@
 
     function searchq() {
         var searchTxt = $("input[name='search']").val();
+        var ctg = $('#category').val();
         if (searchTxt == '') {
             $("#output").html('');
         } else {
             $.post("backend/cur.php", {
-                searchVal: searchTxt
+                searchVal: searchTxt,
+                category: ctg
             }, function(output) {
                 $("#output").html(output);
             });
         }
     }
 </script>
+
+
+<?php
+
+    //take contents here from data to show products
+    //create connection and fetch data of product from sql
+    require_once "loginfo.php";
+
+    //Connection
+    $conn = new mysqli($servername , $username , $password);
+    if(!$conn) {
+        die("[-] Connection error with MySql");
+    }
+
+    //first use database
+    $sql = "USE $product_database";
+    if(!mysqli_query($conn , $sql)){
+        die("[-] Error while using product database !!");
+    }
+
+
+    $sql = "select * from $category_table";
+    $res = mysqli_query($conn , $sql); 
+    if(!$res) {
+        die("[-] Error while querying the category info");
+    }
+?>
+
+
+
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -142,26 +181,37 @@
                         <div class=" col-xl-3 col-lg-3 col-6" style="flex-wrap: nowrap; ">
                             <div class="menu-wrapper d-flex align-items-center justify-content-end ">
                                 <!-- Main-menu -->
-                                <!-- <div class="main-menu d-none d-lg-block "> -->
+                                 <!--<div class="main-menu d-none d-lg-block "> -->
                                 <nav>
                                     <ul>
                                         <li>
-                                            <div class="form-group has-search f-right ">
-                                                <form>
-                                                    <span class="fas fa-search "></span>
-                                                    <!--<input type="text" placeholder="Search.." class="srch-control">-->
-                                                    <input type="text " name="search" class="srch-control myInput" placeholder="Search here ..." onkeydown="searchq();" autocomplete="off">
-                                                </form>
+                                            <div class="input-group" id="input" style="position:absolute;top:20px;left:10px;">
+                                                    <input style="position:absolute;left:10px;width:290px;top:3px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeydown="searchq();" autocomplete="off">
+                                                <div class="input-group-append" style="position:absolute;left:300px;">
+                                                          <select data-trigger="" name="choices-single-defaul" id="category">
+                                                            <option placeholder="">ALL Type</option>
+                                                                <?php
+                                                                    while($row = mysqli_fetch_assoc($res)) {
+                                                                        echo '<option>'.$row['category'].'</option>';
+                                                                    }
+                                                                ?>
+                                                          </select>
+                                                  <button class="btn btn-secondary" type="button">
+                                                    <i class="fa fa-search">
+                                                    </i>
+                                                  </button>
+                                                </div>
                                             </div>
                                             <!--
                                                         search results will be  displayed here 
                                                     -->
-                                            <ul id="output" style="position:absolute;">
+                                            <ul id="output" style="position:absolute;left:20px;top:65px;">
                                             </ul>
                                         </li>
                                     </ul>
                                 </nav>
                                  <!--</div> -->
+
                             </div>
                         </div>
                     </div>
@@ -218,7 +268,7 @@
                             <ul>
                                 <li>
 
-                                    <div id="google_translate_element" class="boxed-btn f-right d-none d-sm-block"></div>
+                                    <div id="google_translate_element" style="position:absolute;left:1430px;top:30px" class=""></div>
 
                                     <script type="text/javascript">
                                         function googleTranslateElementInit() {
