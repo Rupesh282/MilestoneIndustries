@@ -99,7 +99,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p1.png " alt=" ">
+                                        <img src="assets/img/gallery/p1.png " alt=" " style="width: 75px;">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Mixer Grinder</a></h3>
@@ -192,7 +192,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p6.jpg " alt=" ">
+                                        <img src="assets/img/gallery/p6.png " alt=" ">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Non Stick Cookware</a></h3>
@@ -306,7 +306,7 @@
                         <!-- Counter Up -->
                         <div class="single-counter text-center">
                             <span class="counter">12</span><span>+</span>
-                            <p>Categories&nbsp;of&nbsp;Product</p>
+                            <p>Categories of Product</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6">
