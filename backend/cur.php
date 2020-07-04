@@ -13,7 +13,7 @@ float:left;
 .service-list a{
     margin:0px;
     text-align: center; 
-    width:300px;
+    width:400px;
     display:inline-block;
     padding: 0px;
 }
@@ -50,9 +50,29 @@ float:left;
         return $string;
     }
 
+
+    $cat = $_POST['category'];
+
+
+    //This is how you get categroy from index.php
+    //$sch = $_POST['searchVal'];
+    //$ctg = $_POST['category'];
+
+    //echo $sch.'-------'.$ctg;
+
+
+    //die("");
+    
+
+
     if(isset($_POST['searchVal'])) {
         $sch = $_POST['searchVal'];
-        $sql = "select * from $product_table where $product_name like '%$sch%'";
+        if($cat!="ALL Type") {
+            $sql = "select * from $product_table where $product_name like '%$sch%' AND $category='$cat'";
+        }
+        else {
+            $sql = "select * from $product_table where $product_name like '%$sch%'";
+        }
         if($res = mysqli_query($conn , $sql)) {
             $count = mysqli_num_rows($res);
             if($count==0) {
@@ -84,6 +104,7 @@ float:left;
                 }
             }
         }
+        else echo "ERROR in qry";
     } 
     echo $output;
 ?>

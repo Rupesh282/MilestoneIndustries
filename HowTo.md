@@ -6,8 +6,13 @@
 - create product table :
 - `create table product(prod_file VARCHAR(50) , prod_name VARCHAR(50) , mainFrame VARCHAR(30) , categories VARCHAR(50) , id INT NOT NULL AUTO_INCREMENT , PRIMARY KEY (id));`
 
+- create categories table : 
+- `create table categories(category VARCHAR(100));`
+
 - create email table :
 - `create table emails(email VARCHAR(50));`
+
+
 
 # for creating new users from root : 
 -  `create user '[username]'@'localhost' IDENTIFIED BY '[password]';` <br>
