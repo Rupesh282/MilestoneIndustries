@@ -25,29 +25,33 @@
     }
 
 
-    //first switch to emails table to create table
+    //first switch to emails database to create table
     $sql = "USE $email_database";
     if(!mysqli_query($conn , $sql)) {
         die("[-] ERROR WHILE USING DATABASE -> email_database");
     }
 
     //create table for emails : 
-    $sql = "CREATE TABLE emails(email VARCHAR(50));";
+    $sql = "CREATE TABLE $email_table($email_col VARCHAR(50));";
     if(!mysqli_query($conn , $sql)) {
         die("[-] TABLE CREATION ERROR -> email table");
     }
 
-    //first switch to emails table to products table 
+    //first switch to products table 
     $sql = "USE $product_database";
     if(!mysqli_query($conn , $sql)) {
         die("[-] ERROR WHILE USING DATABASE -> product_database");
     }
 
 
-    //TODO : add new column for catogeries of products 
-
     //create table for products in product_database : 
-    $sql = "CREATE TABLE product(prod_file VARCHAR(50) , prod_name VARCHAR(50) , mainFrame VARCHAR(30) , categories VARCHAR(50) , id INT NOT NULL AUTO_INCREMENT , PRIMARY KEY (id));";
+    $sql = "CREATE TABLE $product_table($product_file VARCHAR(50) , $product_name VARCHAR(50) , $mainFrame VARCHAR(30) , $category VARCHAR(50) , $product_id INT NOT NULL AUTO_INCREMENT , PRIMARY KEY ($product_id));";
+    if(!mysqli_query($conn , $sql)) {
+        die("[-] TABLE CREATION ERROR -> product table");
+    }
+
+    //create table for categories
+    $sql = "CREATE TABLE $category_table($category_name VARCHAR(100));";
     if(!mysqli_query($conn , $sql)) {
         die("[-] TABLE CREATION ERROR -> product table");
     }
