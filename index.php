@@ -38,7 +38,7 @@
         </div>
     </div>
 <?php
-    include("header.html");
+    require_once "header.php" ; 
 ?>
     <main>
         <!-- slider Area Start-->

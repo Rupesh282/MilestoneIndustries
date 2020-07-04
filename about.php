@@ -36,9 +36,9 @@
             </div>
         </div>
     </div>
-    <?php
-    include("header.html");
-    ?>
+<?php
+    require_once "header.php" ; 
+?>
         <main>
             <!--? Hero Start -->
             <div class="slider-area2">

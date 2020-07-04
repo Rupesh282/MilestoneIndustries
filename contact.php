@@ -38,7 +38,7 @@
     </div>
     <!-- Preloader Start -->
     <?php
-        include("header.html");
+        require_once  "header.php" ;
     ?>
     <main>
         <!--? Hero Start -->
