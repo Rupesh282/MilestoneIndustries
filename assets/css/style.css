@@ -5961,9 +5961,8 @@ hero-btn {
     padding-left: 5px;
 }
 
-/*/*/
-* line 67,
-C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
+/*/* line 67,C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
+
 /*.footer-area .footer-top .single-footer-caption .footer-form {*/
 
 /*margin-bottom: 30px;*/
@@ -6041,17 +6040,18 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 /**/
 .footer-area .footer-top .single-footer-caption .sub-box {
     position: absolute;
-    width: 200px;
-    height: 80px;
-    border: 1px solid: #08056B;
-    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    border: 0px #08056B;
+    background-color: transparent;
     border-radius: 6px;
+    bottom: 200%;
 }
 .footer-area .footer-top .single-footer-caption .sub-box .front-face,
 .footer-area .footer-top .single-footer-caption .sub-box .back-face {
     position: absolute;
-    width: 70%;
-    height: 10%;
+    width: 80%;
+    height: 100%;
     border-radius: 6px;
 }
 .footer-area .footer-top .single-footer-caption .sub-box .front-face {
@@ -6068,6 +6068,7 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 }
 .footer-area .footer-top .single-footer-caption .sub-box .front-face p {
     color: #83E3ED;
+    font-size: 160%;
 }
 .footer-area .footer-top .single-footer-caption .sub-box:hover .front-face {
     transform: rotateY(100deg) skewY(5deg);
@@ -6107,7 +6108,7 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
     position: relative;
     top: 23%;
     cursor: pointer;
-    width: 25%;
+    width: 30%;
     height: 50%;
     color: #fff;
     background-color: #246FB8;
@@ -6146,6 +6147,8 @@ C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom {
     padding-bottom: 20px;
     padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 15%;
 }
 
 /* line 127, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
@@ -9663,8 +9666,9 @@ del {
 .srch-control {
     border: 1px solid #aaa;
     border-radius: 6px;
-    padding-left: 40px;
+    padding-left: 10%;
     margin-bottom: 10px;
+    margin-top: 15%;
 }
 .has-search span {
     position: absolute;
@@ -9677,8 +9681,8 @@ del {
     text-align: center;
     pointer-events: none;
     color: #aaa;
-    right: 255px;
-    bottom: 30px;
+    right: 86%;
+    bottom: 32.5%;
 }
 
 }
@@ -9735,36 +9739,53 @@ div.logo a img {
         width: 200px;
     }
     .has-search span {
-        right: 230px;
+        right: 83.3%;
+        bottom: 37%;
     }
     .mobile_menu {
         padding-top: 15px;
         padding-right: 30px;
     }
     .form-contact .form-msg textarea {
-        width: 400px;
-        height: 200px;
-        margin-left: 50px;
+        width: 80%;
+        margin-left: 10%;
+        height: 30%;
     }
     .form-contact .form-name input {
-        width: 400px;
+        width: 80%;
+        margin-left: 10%;
         margin-top: 10px;
-        margin-left: 50px;
     }
     .form-contact .form-email input {
         margin-top: 10px;
-        width: 400px;
-        margin-left: 50px;
+        width: 80%;
+        margin-left: 10%;
     }
     .form-contact .form-subject input {
-        width: 400px;
-        margin-left: 50px;
+        width: 80%;
+        margin-left: 10%;
     }
     .contact-title {
-        margin-left: 50px;
+        margin-left: 10%;
     }
     .form-group .button {
-        margin-left: 50px;
+        margin-left: 10%;
+    }
+    .footer-area .footer-top .single-footer-caption .sub-box {
+        bottom: 20%;
+    }
+    .footer-area .footer-top .single-footer-caption .sub-box .front-face p {
+        font-size: 150%;
+        white-space: nowrap;
+    }
+    .footer-area .footer-top .single-footer-caption .sub-box .back-face button {
+        font-size: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .footer-area .footer-bottom {
+        padding-right: 5%;
+        padding-left: 0%;
     }
 }
 .sticky {
@@ -9775,26 +9796,21 @@ div.logo a img {
 .sticky+.content {
     padding-top: 60px;
 }
-
-.login_admin{
- 	width: 500px;
- 	height: 500px;
- 	border: 1px solid #9DA5AA;
- 	margin-bottom: 60px;
- 	border-radius: 10px;
- 	/*box-shadow: */
- 	background-color: #9DA5AA;
+.login_admin {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #9DA5AA;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    /*box-shadow: */
+    background-color: #9DA5AA;
 }
-
-.login_admin a{
-	position: relative;
-	top: 50px;
-	margin-right: 40px;
-	padding-left: 20px;
-
-
+.login_admin a {
+    position: relative;
+    top: 50px;
+    margin-right: 40px;
+    padding-left: 20px;
 }
-
 .boxed-btn-login {
     position: relative;
     /*left: 1100p*/
@@ -9806,7 +9822,8 @@ div.logo a img {
     padding: 5px 5px;
     margin-right: 10px;
     /*margin-left: 90px;*/
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto",
+    sans-serif;
     border-radius: 6px;
     font-size: 15px;
     font-weight: 400;
@@ -9821,66 +9838,52 @@ div.logo a img {
     height: 30px;
 }
 
-
 /* line 75, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_variables.scss */
-
 .boxed-btn-login:hover {
     background: #14435c;
     color: #fff !important;
     border: 1px solid #14435c;
 }
 
-
 /* line 80, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_variables.scss */
-
 .boxed-btn-login:focus {
     outline: none;
 }
 
-
 /* line 83, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_variables.scss */
-
 .boxed-btn-login .large-width {
     width: 220px;
 }
-
-
-.prod-details{
-    margin-left: 10px; 
+.prod-details {
+    margin-left: 10px;
     width: 400px;
     height: 583px;
     border: solid 1px #C7CDD1;
 }
-
-.prod-details h4{
+.prod-details h4 {
     font-family: sans-serif;
     font-weight: 50;
     margin-top: 15px;
     margin-left: 15px;
     /*border-bottom: 1px solid #000;*/
 }
-
 .prod-title {
     border-bottom: 1px solid #C7CDD1;
 }
-
-.prod-details ul li{
+.prod-details ul li {
     padding-left: 10px;
     border-bottom: 1px solid #C7CDD1;
     color: #6A6C70;
 }
-.prod-details ul li span{
+.prod-details ul li span {
     /*padding-left: 10px;*/
-    padding-right: 10px; 
+    padding-right: 10px;
     float: right;
     color: #96989E;
 }
-
-
-.search-list{
+.search-list {
     background-color: #EDF0DA;
 }
-
 .search-list ul li {
     margin-left: 250px;
     margin-top: 30px;
@@ -9891,38 +9894,32 @@ div.logo a img {
     border-radius: 10px;
     background-color: #E1EE91;
     box-shadow: 5px 5px #9AB208;
-
 }
-
-.search-list ul li img{
+.search-list ul li img {
     width: 180px;
     height: 180px;
     margin-top: 20px;
     margin-left: 30px;
 }
-
-.search-list ul li h3{
-    position: relative;
-    top: -150px;
-    padding-left: 240px;
-    color: #0B0773;
-
-}
-
-.search-list ul li p{
+.search-list ul li h3 {
     position: relative;
     top: -150px;
     padding-left: 240px;
     color: #0B0773;
 }
-
-.search-list ul li span{
+.search-list ul li p {
     position: relative;
     top: -150px;
     padding-left: 240px;
     color: #0B0773;
-    
 }
+.search-list ul li span {
+    position: relative;
+    top: -150px;
+    padding-left: 240px;
+    color: #0B0773;
+}
+
 /* .header-area {
     text-transform: capitalize;
 } */
