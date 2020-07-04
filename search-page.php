@@ -37,7 +37,7 @@
         </div>
     </div>
 <?php
-include("header.html");
+    require_once "header.php" ; 
 ?>
 <main>
     <div class="search-list">
