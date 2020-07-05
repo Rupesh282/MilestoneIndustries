@@ -53,7 +53,7 @@
     //create table for categories
     $sql = "CREATE TABLE $category_table($category_name VARCHAR(100));";
     if(!mysqli_query($conn , $sql)) {
-        die("[-] TABLE CREATION ERROR -> product table");
+        die("[-] TABLE CREATION ERROR -> category table");
     }
     
     die("DATABASE INSTALLATION SUCCESSFUL !!");
