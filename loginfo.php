@@ -1,8 +1,8 @@
 <?php 
 	//while checking in your system, please make valid changes here 
 	$servername 	= "localhost";
-	$username   	= "rupesh";
-	$password   	= "Rupesh@1";
+	$username   	= "dhruve";
+	$password   	= "proweb";
 
 
     //data base for emails (subscription)
@@ -30,7 +30,7 @@
 
     //this is product files path
     //put path of your products directory here ..
-    $PATH = '../../rn/trial/products';
+    $PATH = 'products';
  ?>
 
 
