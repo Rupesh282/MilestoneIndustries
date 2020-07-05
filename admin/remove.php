@@ -10,6 +10,29 @@
     }
 
 
+    //take contents here from data to show products
+    //create connection and fetch data of product from sql
+    require_once "loginfo.php";
+
+    //Connection
+    $conn = new mysqli($servername , $username , $password);
+    if(!$conn) {
+        die("[-] Connection error with MySql");
+    }
+
+    //first use database
+    $sql = "USE $product_database";
+    if(!mysqli_query($conn , $sql)){
+        die("[-] Error while using product database !!");
+    }
+
+
+    $sql = "select * from $category_table";
+    $res = mysqli_query($conn , $sql); 
+    if(!$res) {
+        die("[-] Error while querying the category info");
+    }
+
 ?>
 
 
@@ -29,10 +52,14 @@
     }
     function searchq() {
         var searchTxt = $("input[name='search']").val();
+        var ctg = $('#category').val();
         if(searchTxt == '') {
             $("#output").html('');
         } else {
-            $.post("cur.php", {searchVal: searchTxt}, function(output) {
+            $.post("cur.php", {
+            searchVal: searchTxt,
+            category: ctg
+            }, function(output) {
                 $("#output").html(output);
             });
         }
@@ -59,6 +86,11 @@ float:left;
     width:400px;
     display:inline-block;
     padding: 0px;
+}
+
+#category {
+    width:5%;
+    height:5%;
 }
 
 #myInput {
@@ -104,18 +136,27 @@ float:left;
 
 <center> <h2>Remove</h2> </center>
 
-<?php 
     
 
-    //make search box to search products
-    //after choosing one , confirm for deletion of product
-    //if yes then delete
-    echo '<input type="text" name="search" id="myInput" onkeydown="searchq();" placeholder="Search for names.." autocomplete="off">' ;
+    <!---
+        make search box to search products
+        after choosing one , confirm for deletion of product
+        if yes then delete
+    -->
+    <input type="text" name="search" id="myInput" onkeyup="searchq();" placeholder="Search for names.." autocomplete="off">
+      <select data-trigger="" name="category" id="category">
+        <option placeholder="">ALL Type</option>
+            <?php
+                while($row = mysqli_fetch_assoc($res)) {
+                    echo '<option>'.$row['category'].'</option>';
+                }
+            ?>
+      </select>
 
-    echo '<ul id="output" >
-    </ul>';
+
+     <ul id="output" >
+    </ul>
 
 
 
-?>
 

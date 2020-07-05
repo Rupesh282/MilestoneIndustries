@@ -68,10 +68,10 @@ float:left;
     if(isset($_POST['searchVal'])) {
         $sch = $_POST['searchVal'];
         if($cat!="ALL Type") {
-            $sql = "select * from $product_table where $product_name like '%$sch%' AND $category='$cat'";
+            $sql = "select * from $product_table where $product_name like '%$sch%' AND $category='$cat' LIMIT 4";
         }
         else {
-            $sql = "select * from $product_table where $product_name like '%$sch%'";
+            $sql = "select * from $product_table where $product_name like '%$sch%' LIMIT 4";
         }
         if($res = mysqli_query($conn , $sql)) {
             $count = mysqli_num_rows($res);
@@ -87,13 +87,14 @@ float:left;
                     //get the  extension of mainFrame files
                     $mainFramephoto = $row[$mainFrame];
 
+                    //for clean urls
                     $urlOfproduct = "product/$productFile/$productId";
                     //$urlOfproduct = "show.php?productId=$productId&productName=$nameOfproduct";
 
                     $imagepath = "";
                     //this path is relative to index.php
                     $relpath = $PATH.'/';
-                    if(file_exists($path.'/'.$productFile.'/photos/'.$mainFramephoto)) {
+                    if(file_exists($path.'/'.$productFile.'/photos/'.$mainFramephoto) && $mainFramephoto!="") {
                         $imagepath = $relpath.$productFile.'/photos/'.$mainFramephoto;
                     } else $imagepath= $relpath.'dummy/default.png';
 

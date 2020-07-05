@@ -8,6 +8,31 @@
     if(!$_SESSION['username'] || !$_SESSION['password']) {
         die("You are not allowed here");
     }
+
+    //take contents here from data to show products
+    //create connection and fetch data of product from sql
+    require_once "loginfo.php";
+
+    //Connection
+    $conn = new mysqli($servername , $username , $password);
+    if(!$conn) {
+        die("[-] Connection error with MySql");
+    }
+
+    //first use database
+    $sql = "USE $product_database";
+    if(!mysqli_query($conn , $sql)){ die("[-] Error while using product database !!");
+    }
+
+
+    $sql = "select * from $category_table";
+    $getcat = mysqli_query($conn , $sql); 
+    if(!$getcat) {
+        die("[-] Error while querying the category info");
+    }
+
+
+
     
 
 ?>
@@ -71,9 +96,21 @@
         </div>
         <br>
         <div>
+          Category type : 
+          <select data-trigger=""  name="category">
+                <option placeholder="">ALL Type</option>
+                <?php
+                    while($row = mysqli_fetch_assoc($getcat)) {
+                        echo '<option>'.$row['category'].'</option>';
+                    }
+                ?>
+          </select>
+          <br><br>
            <label for="usr">Product Description :</label> 
             <input type="text" class="form-control" name="brand"            autocomplete="off" placeholder="Brand"><br>
             <input type="text" class="form-control" name="grinder-type"     autocomplete="off" placeholder="GrinderType"><br>
+
+
             <input type="text" class="form-control" name="model-name"       autocomplete="off" placeholder="Model Name/Number"><br>
             <input type="text" class="form-control" name="usage"            autocomplete="off" placeholder="Usage/Application"><br>
             <input type="text" class="form-control" name="wattage"          autocomplete="off" placeholder="Wattage"><br>
