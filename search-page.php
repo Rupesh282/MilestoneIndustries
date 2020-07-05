@@ -24,6 +24,27 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+<style>
+/*to remove all white space at left and right sides of screen*/
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+/*if you enable below code it will show all marking for debugging css*/
+/*{
+  //background: #000 !important;
+  //color: #0f0 !important;
+  //outline: solid #f00 1px !important;
+//}
+*/
+</style>
+
 <body class="body-bg">
     <!--? Preloader Start -->
     <div id="preloader-active">
@@ -39,23 +60,85 @@
 <?php
     require_once "header.php" ; 
 ?>
+
+<?php
+
+    require_once "loginfo.php";
+
+    if(isset($_POST['submit'])) {
+        //echo $_POST['search'].'<br>';
+        //echo $_POST['category'].'<br>';
+
+        //take posted data from header.php
+        $src = $_POST['search'];
+        $ctg = $_POST['category'];
+
+        //first take all product from database and then show them (add link to their seperate page)
+        if($src != "") {
+            if($ctg == "ALL Type") {
+                $sql = "select * from $product_table where $product_name like '%$src%'";
+            } else {
+                $sql = "select * from $product_table where $product_name like '%$src%' AND $category='$ctg'";
+            }
+            $res = mysqli_query($conn , $sql);
+            if(!$res) {
+                echo "[-] Error while querying in product database";
+            } else {
+                //while($row = mysqli_fetch_assoc($res)) {
+                    //echo $row[$product_name].'<br>';
+                //}
+            }
+        }
+    }
+
+
+?>
+
+
+
+
 <main>
     <div class="search-list">
         <div class="row">
         <ul>
-            <li>
-                    <img src="assets/img/blog/single_blog_1.png">
-                    <h3>[Product 1]</h3>
-                    <p>[Brand]</p>
-                    <span>[category]</span>
+            <?php
+
+                //echo '<h5>
+                    //Showing results for search word : "'.$src.'" in category : '.$ctg.'
+                //</h5>';
                 
-            </li>
-             <li>
-                 <img src="assets/img/blog/single_blog_1.png">
-                    <h3>[Product 2]</h3>
-                    <p>[Brand]</p>
-                    <span>[category]</span>
-            </li>
+                //show all products here
+                if($src!="" && mysqli_num_rows($res)>0) {
+                    while($row = mysqli_fetch_assoc($res)) {
+                        $image_path = $PATH.'/'.$row[$product_file].'/photos/'.$row[$mainFrame];
+                        $product_link = 'product/'.$row[$product_file].'/'.$row[$product_id];
+                        
+                        //access json file for another  info about product 
+                        $jsonfile = $PATH.'/'.$row[$product_file].'/info.json';
+                        $jsondata = file_get_contents($jsonfile);
+                        $array = json_decode($jsondata , true);
+
+                        echo '
+                            <a href='.$product_link.' style="text-decoration:none">
+                                <li>
+                                        <img src='.$image_path.'>
+                                        <h3>'.$row[$product_name].'</h3>
+                                        <p>Brand : '.$array['data']['brand'].'</p>
+                                        <span> Category : '.$row[$category].'</span>
+                                    
+                                </li>
+                            </a>
+                        ';
+                    }
+                } else {
+                    echo "
+                        <div class='alert alert-danger' role='alert'>
+                            Opps ! No such product available
+                        </div>
+                    ";
+                }
+
+            ?>
         </ul>
     </div>
     </div>
