@@ -6,8 +6,13 @@
 - create product table :
 - `create table product(prod_file VARCHAR(50) , prod_name VARCHAR(50) , mainFrame VARCHAR(30) , categories VARCHAR(50) , id INT NOT NULL AUTO_INCREMENT , PRIMARY KEY (id));`
 
+- create categories table : 
+- `create table categories(category VARCHAR(100));`
+
 - create email table :
 - `create table emails(email VARCHAR(50));`
+
+
 
 # for creating new users from root : 
 -  `create user '[username]'@'localhost' IDENTIFIED BY '[password]';` <br>
@@ -34,12 +39,15 @@ This will copy all data from previous server to new one including all entries in
 # For enabling rewriting of urls : 
 - `sudo a2enmod rewrite`
 - go to `/etc/apache2/sites-available/000-default.conf ` and add this commands in file : 
+- (otherwise you can put it in apache2.conf)
 - `<Directory "/var/www/html">
       AllowOverride All
     </Directory>`
 - then restart apache server (sudo service apache2 restart)
 - useful link -> [StachOverFlow](https://stackoverflow.com/questions/12202387/htaccess-not-working-apache#:~:text=htaccess%20files%20are%20being%20ignored,right%20block%20in%20your%20configuration.)
 
+- also before checking in you local machine , change path in `base` tag present in header
+  in show.php to your assets folder containing css (relative to root dir)
 
 
 

@@ -65,7 +65,13 @@
 
     if(isset($_POST['searchVal'])) {
         $sch = $_POST['searchVal'];
-        $sql = "select * from $product_table where $product_name like '%$sch%'";
+        $cat = $_POST['category'];
+        if($cat!="ALL Type") {
+            $sql = "select * from $product_table where $product_name like '%$sch%' AND $category='$cat' LIMIT 4";
+        }
+        else {
+            $sql = "select * from $product_table where $product_name like '%$sch%' LIMIT 4";
+        }
         if($res = mysqli_query($conn , $sql)) {
             $count = mysqli_num_rows($res);
             if($count==0) {

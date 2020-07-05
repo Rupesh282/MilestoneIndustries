@@ -37,7 +37,7 @@
         </div>
     </div>
 <?php
-include("header.html");
+    require_once "header.php" ; 
 ?>
 <main>
 <section class="blog_area section-padding">
@@ -46,8 +46,7 @@ include("header.html");
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="" style="width: 250px;height:250px">
-                                </div>
+                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="" style="width: 250px;height:250px"> </div>
                         </div>
                         <div class="col-lg-5 mb-5 mb-lg-0">
                                 <div class="blog_details">
