@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+
+
 <body class="body-bg">
     <!--? Preloader Start -->
     <div id="preloader-active">

@@ -9,28 +9,11 @@
 <!--for search box-->
 <style>
     #input {
-        width:500px;
+        width:180%;
     }
     .has-search .form-control {
         padding-left: 2.375rem;
     }
-    #myInput {
-        background-position: 10px 12px;
-        /* Position the search icon */
-        background-repeat: no-repeat;
-        /* Do not repeat the icon image */
-        width: 100%;
-        /* Full-width */
-        font-size: 16px;
-        /* Increase font-size */
-        padding: 12px 20px 12px 40px;
-        /* Add some padding */
-        border: 1px solid #ddd;
-        /* Add a grey border */
-        margin-bottom: 12px;
-        /* Add some space below the input */
-    }
-    
     #output {
         /* Remove default list styling */
         list-style-type: none;
@@ -185,10 +168,11 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <div class="input-group" id="input" style="position:absolute;top:20px;left:10px;">
-                                                    <input style="position:absolute;left:10px;width:290px;top:3px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeydown="searchq();" autocomplete="off">
-                                                <div class="input-group-append" style="position:absolute;left:300px;">
-                                                          <select data-trigger="" name="choices-single-defaul" id="category">
+                                            <div class="input-group" id="input" style="position:absolute;top:30%;left:10%;">
+                                                <form action="search-page.php" method="POST">
+                                                    <input style="position:absolute;left:9.9%;width:50%;top:2px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
+                                                <div class="input-group-append" style="position:absolute;left:60%;">
+                                                          <select data-trigger="" name="category" id="category">
                                                             <option placeholder="">ALL Type</option>
                                                                 <?php
                                                                     while($row = mysqli_fetch_assoc($res)) {
@@ -196,16 +180,17 @@
                                                                     }
                                                                 ?>
                                                           </select>
-                                                  <button class="btn btn-secondary" type="button">
+                                                  <button class="btn btn-secondary" type="submit" name="submit">
                                                     <i class="fa fa-search">
                                                     </i>
                                                   </button>
+                                                </form>
                                                 </div>
                                             </div>
                                             <!--
                                                         search results will be  displayed here 
                                                     -->
-                                            <ul id="output" style="position:absolute;left:20px;top:65px;">
+                                            <ul id="output" style="position:absolute;left:27%;top:305%;">
                                             </ul>
                                         </li>
                                     </ul>
@@ -268,7 +253,7 @@
                             <ul>
                                 <li>
 
-                                    <div id="google_translate_element" style="position:absolute;left:1430px;top:30px" class=""></div>
+                                    <div id="google_translate_element" style="position:absolute;left:86%;top:10%" class=""></div>
 
                                     <script type="text/javascript">
                                         function googleTranslateElementInit() {
