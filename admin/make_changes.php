@@ -233,6 +233,9 @@
         if ($_POST['additionalinfo']) {
             $array['additionalinfo'] = $_POST['additionalinfo'];
         }
+        if ($_POST['category']) {
+            $array['category'] = $_POST['category'];
+        }
 
         $json = json_encode(array('data' => $array), JSON_PRETTY_PRINT);
     
@@ -242,11 +245,13 @@
             echo "failed to write to json file";
         }
 
+        $cat = $_POST['category'];
+
 
         //now add product to sql database 
         //add name of product and its foldername
         $folder_name = str_replace(' '  , '' , $PrName);
-        $sql = "update $product_table set prod_file='$folder_name' , prod_name='$PrName' , mainFrame='$newmainimage' where id=$PrId";
+        $sql = "update $product_table set $product_file='$folder_name' , $product_name='$PrName' , $mainFrame='$newmainimage' , $category='$cat' where $product_id=$PrId";
         if(mysqli_query($conn , $sql)) {
             echo "[+] Product changed to sql successfully !!";
         } else {

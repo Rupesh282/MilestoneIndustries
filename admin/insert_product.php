@@ -7,6 +7,7 @@
     if(!$_SESSION['username'] || !$_SESSION['password']) {
         die("You are not allowed here");
     }
+
 ?>
 <!-- All boostrap crap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -86,6 +87,10 @@
 
         //temp get name by post method
         $PrName = $_POST['product_name'];
+
+
+        //get category name of product
+        $catname = $_POST['category'];
 
         //This is root path (all products will be inside it)
         //$path = '../../rn/trial/products/';
@@ -203,6 +208,9 @@
         if ($_POST['additionalinfo']) {
             $array['additionalinfo'] = $_POST['additionalinfo'];
         }
+        if ($_POST['category']) {
+            $array['category'] = $_POST['category'];
+        }
 
         $json = json_encode(array('data' => $array), JSON_PRETTY_PRINT);
     
@@ -216,7 +224,7 @@
         //now add product to sql database 
         //add name of product and its foldername
         $folder_name = str_replace(' '  , '' , $PrName);
-        $sql = "insert into $product_table(prod_file , prod_name) values('$folder_name' , '$PrName')";
+        $sql = "insert into $product_table($product_file, $product_name,$category) values('$folder_name' , '$PrName' , '$catname')";
         if(mysqli_query($conn , $sql)) {
             echo "[+] Product added to sql successfully !!";
         } else {

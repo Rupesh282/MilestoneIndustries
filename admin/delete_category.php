@@ -1,4 +1,5 @@
 <?php
+
     session_start();
     /*
      *  for security reasons
@@ -8,12 +9,6 @@
         die("You are not allowed here");
     }
 
-    //for cleaning cache  of page
-    header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
-    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    header("Cache-Control: post-check=0, pre-check=0", false);
-    header("Pragma: no-cache");
 
     //take contents here from data to show products
     //create connection and fetch data of product from sql
@@ -27,18 +22,18 @@
 
     //first use database
     $sql = "USE $product_database";
-    if(!mysqli_query($conn , $sql)){
-        die("[-] Error while using product database !!");
+    if(!mysqli_query($conn , $sql)){ die("[-] Error while using product database !!");
     }
 
 
     $sql = "select * from $category_table";
-    $res = mysqli_query($conn , $sql); 
-    if(!$res) {
+    $getcat = mysqli_query($conn , $sql); 
+    if(!$getcat) {
         die("[-] Error while querying the category info");
     }
 
 ?>
+
 
 <!-- All boostrap crap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -56,14 +51,10 @@
     }
     function searchq() {
         var searchTxt = $("input[name='search']").val();
-        var ctg = $('#category').val();
         if(searchTxt == '') {
             $("#output").html('');
         } else {
-            $.post("modifycur.php", {
-                searchVal: searchTxt,
-                category: ctg
-            }, function(output) {
+            $.post("cur.php", {searchVal: searchTxt}, function(output) {
                 $("#output").html(output);
             });
         }
@@ -90,11 +81,6 @@ float:left;
     width:400px;
     display:inline-block;
     padding: 0px;
-}
-
-#category {
-    width:5%;
-    height:5%;
 }
 
 #myInput {
@@ -133,34 +119,86 @@ float:left;
 
 </style>
 
+
     <form action="manage.php" method="POST">
         <input type="submit" name="submit" class="btn btn-danger" value="back">
     </form>
 
+<center> <h2>Delete Category</h2> </center>
 
-<center> <h2>Modify</h2> </center>
+<?php 
+    
+    //fucntion to delete all files in a folder including folder itself
+    function delete_files($target) {
+        if(is_dir($target)){
+            $files = glob( $target . '*', GLOB_MARK ); //GLOB_MARK adds a slash to directories returned
+
+            foreach( $files as $file ){
+                delete_files( $file );      
+            }
+
+            rmdir( $target );
+        } elseif(is_file($target)) {
+            unlink( $target );  
+        }
+    }
+    
+
+    if(isset($_POST["delete"])) {
+        $catname = $_POST['category'];
 
 
-    <!---
-        make search box to search products
-        after choosing one , confirm for deletion of product
-        if yes then delete
-    -->
-    <input type="text" name="search" id="myInput" onkeyup="searchq();" placeholder="Search for names.." autocomplete="off">
+        //first take products from database then delete their folders
+        $sql = "select * from $product_table where $category='$catname'";
+        $alldata = mysqli_query($conn , $sql);
+        if($alldata) {
+            echo "Name  of  deleted products : <br>";
+            while($row = mysqli_fetch_assoc($alldata)) {
+                //deleting folder of product
+                $productFile = $row[$product_file];
+                echo '-'.$row[$product_name].'<br>';
+                $filePath = $rPATH.'/'.$productFile.'/';
+                delete_files($filePath);
+            }
+            echo "<br>";
 
-      <select data-trigger="" name="category" id="category">
-        <option placeholder="">ALL Type</option>
+            $sql = "delete from $product_table where $category='$catname'";
+            $res = mysqli_query($conn , $sql);
+            if($res) {
+                echo "Deleted all products from database !";
+            } else "Error while deleting products from database !";
+            echo "<br>";
+
+
+            $sql = "delete from $category_table where $category_name='$catname'";
+            $res = mysqli_query($conn , $sql);
+            if($res)
+                echo "Category deleted successfullly !";
+            else 
+                echo "[-] Error while removing category from database !";
+        } else {
+            echo "[-] Error while querying products in database to delete";
+        }
+
+
+    }
+
+
+
+?>
+
+    <form action="delete_category.php" method="POST">
+      Category type : 
+      <select data-trigger=""  name="category">
+            <option placeholder="">ALL Type</option>
             <?php
-                while($row = mysqli_fetch_assoc($res)) {
+                while($row = mysqli_fetch_assoc($getcat)) {
                     echo '<option>'.$row['category'].'</option>';
                 }
             ?>
       </select>
-
-
-    <ul id="output" >
-    </ul>
-
-
-
+      <br><br>
+        <input type="submit" value="delete" name="delete">
+        <h4>warning : all products with this category will be deleted !</h4>
+    </form>
 

@@ -97,6 +97,11 @@
          die("[-] Error while using database !!");
      }
  
+     $sql = "select * from $category_table";
+     $getcat = mysqli_query($conn , $sql); 
+     if(!$getcat) {
+         die("[-] Error while querying the category info");
+     }
  
      //take product Id from Get method
      $productId = $_GET['productId'];
@@ -136,6 +141,8 @@
     $Attr[16] = $array['data']['nblades'];         
     $Attr[17] = $array['data']['bodyshape'];       
     $Attr[18] = $array['data']['additionalinfo'];  
+    $Attr[19] = $array['data']['category'];  
+
      //add here and in input box if there are any new attributes
      
 
@@ -160,6 +167,17 @@
             <input type="hidden" name="productId" value="<?php echo $productId; ?>" >
         </div>
         <br>
+          Category type : 
+          <select data-trigger=""  name="category">
+              <option placeholder=""><?php echo $Attr[19]; ?></option>
+                <?php
+                    while($row = mysqli_fetch_assoc($getcat)) {
+                        if($row['category']!=$Attr[19])
+                            echo '<option>'.$row['category'].'</option>';
+                    }
+                ?>
+          </select>
+          <br><br>
         <div>
            <center><label for="usr">Product Description</label></center> <br>
             <label for="usr">brand : </label>
@@ -211,7 +229,7 @@
                 <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
           </div>
           <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit" name="submit">ADD</button>  
+                <button class="btn btn-outline-secondary" type="submit" name="submit">MODIFY</button>  
           </div>
         </div>   
 
