@@ -8,12 +8,6 @@
 
 <!--for search box-->
 <style>
-    #input {
-        width:180%;
-    }
-    .has-search .form-control {
-        padding-left: 2.375rem;
-    }
     #output {
         /* Remove default list styling */
         list-style-type: none;
@@ -145,10 +139,10 @@
                                 <a href="index.php"><img src="assets/img/logo/logo.png " alt=" " style="padding-top: 20px; padding-right: 0px;"></a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6">
+                        <div class="col-xl-6 col-lg-6 d-none d-md-block">
                             <div class="menu-wrapper d-flex align-items-center justify-content-end ">
                                 <!-- Main-menu -->
-                                <div class="main-menu d-none d-md-block ">
+                                <div class="main-menu">
                                     <nav>
                                         <ul class="tagline" style="white-space: nowrap; right: 100px;bottom: -30px;position: absolute;">
                                             <li><a style="font-size: 20px;">EXPORTS</a></li>
@@ -168,10 +162,11 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <div class="input-group" id="input" style="position:absolute;top:30%;left:10%;">
+                                            <div class="input-group" id="input" style="position:absolute;top:30%;left:0%;">
                                                 <form action="search-page.php" method="POST">
-                                                    <input style="position:absolute;left:9.9%;width:50%;top:2px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
+                                                    <input style="position:absolute;left:0%;width:60%;top:2px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
                                                 <div class="input-group-append" style="position:absolute;left:60%;">
+                                                <div class="d-none d-md-block">
                                                           <select data-trigger="" name="category" id="category">
                                                             <option placeholder="">ALL Type</option>
                                                                 <?php
@@ -180,6 +175,7 @@
                                                                     }
                                                                 ?>
                                                           </select>
+                                                          </div>
                                                   <button class="btn btn-secondary" type="submit" name="submit">
                                                     <i class="fa fa-search">
                                                     </i>
@@ -253,7 +249,7 @@
                             <ul>
                                 <li>
 
-                                    <div id="google_translate_element" style="position:absolute;left:86%;top:10%" class=""></div>
+                                    <div id="google_translate_element" style="position:absolute;right:10%;top:10%" class=""></div>
 
                                     <script type="text/javascript">
                                         function googleTranslateElementInit() {
