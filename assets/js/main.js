@@ -56,7 +56,7 @@
         });
         BasicSlider.slick({
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: time["timeout"],
             swipeToSlide: true,
             dots: false,
             fade: false,

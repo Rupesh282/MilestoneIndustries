@@ -388,8 +388,25 @@ include("footer.html");
     <script src="./assets/js/jquery.ajaxchimp.min.js "></script>
 
     <!-- Jquery Plugins, main Jquery -->
+
+
+    <!--this is for changing timeout of banners from backend-->
+    <script>
+        var time = {
+            //this is global array (can be used by any js file)
+            <?php
+                $jsonfile = './assets/js/timeout.json';
+                $jsondata = file_get_contents($jsonfile);
+                $array = json_decode($jsondata,true);
+
+                $timeout = $array['timeout']['time'];
+                echo '  timeout : ' . '"' . $timeout. '",' . "\n";  
+            ?>
+        };
+    </script>
+
     <script src="./assets/js/plugins.js "></script>
-    <script src="./assets/js/main.js "></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
 
