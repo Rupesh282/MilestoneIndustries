@@ -305,10 +305,10 @@
             <div class="container ">
                 <div class="brand-active brand-border pb-40 ">
                     <div class="single-brand ">
-                        <img src="assets/img/gallery/brand1.png " alt=" ">
+                    <a href="https://www.veronica.co.in"><img src="assets/img/gallery/brand1.png " alt=" "></a>
                     </div>
                     <div class="single-brand ">
-                        <img src="assets/img/gallery/brand2.png " alt=" ">
+                        <a href="https://www.blackstone.co.in"><img src="assets/img/gallery/brand2.png " alt=" "></a>
                     </div>
                 </div>
             </div>
