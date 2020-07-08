@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
                 $shortname = $_FILES['upload']['name'][$i];
 
                 //save the url and the file
-                $filePath = "../../rn/trial/products/dummy/".$_FILES['upload']['name'][$i];
+                $filePath = "../assets/img/hero/".$_FILES['upload']['name'][$i];
 
                 //Upload the file into the temp dir
                 if(move_uploaded_file($tmpFilePath, $filePath)) {
@@ -38,6 +38,8 @@ if(isset($_POST['submit'])){
                     //use $shortname for the filename
                     //use $filePath for the relative url to the file
 
+                } else {
+                    echo "permission deneied !!";
                 }
               }
         }

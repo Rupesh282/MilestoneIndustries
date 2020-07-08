@@ -103,6 +103,9 @@
             <form action="delete_category.php" method="POST">
                 <input type="submit" value="DELETE CATEGORY" class="btn btn-success" id="btn" name="submit">
             </form>
+            <form action="change_banner.php" method="POST">
+                <input type="submit" value="BANNER SETTINGS" class="btn btn-success" id="btn" name="submit">
+            </form>
           </div>';
 ?>
 </center>
