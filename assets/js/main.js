@@ -59,7 +59,7 @@
             autoplaySpeed: 5000,
             swipeToSlide: true,
             dots: false,
-            fade: true,
+            fade: false,
             arrows: false,
             adaptiveHeight: true,
             variableWidth: true,

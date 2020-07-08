@@ -305,10 +305,10 @@
             <div class="container ">
                 <div class="brand-active brand-border pb-40 ">
                     <div class="single-brand ">
-                    <a href="https://veronica.co.in/"><img src="assets/img/gallery/brand1.png " alt=" "></a>
+                    <a href="https://veronica.co.in/" target="_blank"><img src="assets/img/gallery/brand1.png " alt=" "></a>
                     </div>
                     <div class="single-brand ">
-                        <a href="https://blackstone.co.in"><img src="assets/img/gallery/brand2.png " alt=" "></a>
+                        <a href="https://blackstone.co.in" target="_blank"><img src="assets/img/gallery/brand2.png " alt=" "></a>
                     </div>
                 </div>
             </div>
@@ -365,8 +365,8 @@ include("footer.html");
     <script src="./assets/js/jquery.slicknav.min.js "></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js "></script>
-    <script src="./assets/js/slick.min.js "></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
     <!-- One Page, Animated-HeadLin -->
     <script src="./assets/js/wow.min.js "></script>
     <script src="./assets/js/animated.headline.js "></script>
@@ -377,8 +377,8 @@ include("footer.html");
     <script src="./assets/js/jquery.sticky.js "></script>
 
     <!-- counter , waypoint -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js "></script>
-    <script src="./assets/js/jquery.counterup.min.js "></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js"></script>
 
     <!-- contact js -->
     <script src="./assets/js/contact.js "></script>
@@ -388,8 +388,8 @@ include("footer.html");
     <script src="./assets/js/jquery.ajaxchimp.min.js "></script>
 
     <!-- Jquery Plugins, main Jquery -->
-    <script src="./assets/js/plugins.js "></script>
-    <script src="./assets/js/main.js "></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
 
