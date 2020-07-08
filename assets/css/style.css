@@ -4688,8 +4688,7 @@ hero-btn {
 
 /* line 18, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
 .slider-height2 {
-    /* height: 700px; */
-    
+    height: 450px;
     background-size: cover;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4716,8 +4715,7 @@ hero-btn {
 
 /* line 31, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_h1-hero.scss */
 .slider-area2 {
-    /* background-image: url(../img/hero/hero2.jpg); */
-    
+    background-image: url(../img/hero/hero2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -9728,7 +9726,7 @@ del {
     padding-bottom: 20px;
 }
 div.logo a img {
-    width: 85%;
+    width: 80%;
 }
 @media screen and (max-width: 600px) {
     ul.tagline {
@@ -9940,4 +9938,4 @@ div.logo a img {
     text-transform: capitalize;
 } */
 
-/*# sourceMappingURL=style.css.map
+/* # sourceMappingURL=style.css.map
