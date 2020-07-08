@@ -130,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-bottom">
+            <div class="header-bottom header-stick" style="background-color: white;">
                 <div class="container">
                     <div class="row align-items-center" style="flex-wrap: nowrap;">
                         <!-- Logo -->
@@ -225,7 +225,7 @@
                                         </li>
                                         <li><a href="about.php">ABOUT US</a></li>
                                         <li>
-                                            <a href="#social">SOCIAL</a>
+                                            <a href="#">SOCIAL</a>
                                             <ul class="submenu" style="width: 120px;">
                                                 <li><a href="updating.php">Twitter</a></li>
                                                 <li><a href="updating.php">Facebook</a></li>
@@ -266,7 +266,7 @@
                     </div>
                 </div>
                 <!-- Mobile Menu -->
-                <div class="col-12">
+                <div class="col-12 header-stick">
                     <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
             </div>

@@ -41,8 +41,8 @@
         require_once  "header.php" ;
     ?>
     <main>
-        <img src="/assets/img/gallery/updating.gif" style="height:100%;">
-        <h1>Updating Soon!</h1>
+        <img src="/assets/img/gallery/updating.gif" style="height:100%;width:10%; display: block;margin-left: auto;margin-right: auto;">
+        <h1 style="width:20%; display: block;margin-left: auto;margin-right: auto;">Updating Soon!</h1>
     </main>
     <!-- <footer> -->
     <?php
