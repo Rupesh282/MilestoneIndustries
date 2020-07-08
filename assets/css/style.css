@@ -5840,9 +5840,6 @@ hero-btn {
 }
 
 /* line 3, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
-.footer-area .footer-top {
-    border-bottom: 1px solid #ffffff;
-}
 .footer-area .footer-top .single-footer-caption {
     color: #000000;
 }
@@ -6148,6 +6145,7 @@ hero-btn {
 
 /* line 122, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom {
+    border-top: 1px solid #ffffff;
     padding-bottom: 20px;
     padding-top: 10px;
     padding-left: 10%;
