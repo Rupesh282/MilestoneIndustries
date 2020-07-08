@@ -80,26 +80,26 @@
 
     //take contents here from data to show products
     //create connection and fetch data of product from sql
-    require_once "loginfo.php";
+    //require_once "loginfo.php";
 
-    //Connection
-    $conn = new mysqli($servername , $username , $password);
-    if(!$conn) {
-        die("[-] Connection error with MySql");
-    }
+    ////Connection
+    //$conn = new mysqli($servername , $username , $password);
+    //if(!$conn) {
+        //die("[-] Connection error with MySql");
+    //}
 
-    //first use database
-    $sql = "USE $product_database";
-    if(!mysqli_query($conn , $sql)){
-        die("[-] Error while using product database !!");
-    }
+    ////first use database
+    //$sql = "USE $product_database";
+    //if(!mysqli_query($conn , $sql)){
+        //die("[-] Error while using product database !!");
+    //}
 
 
-    $sql = "select * from $category_table";
-    $res = mysqli_query($conn , $sql); 
-    if(!$res) {
-        die("[-] Error while querying the category info");
-    }
+    //$sql = "select * from $category_table";
+    //$res = mysqli_query($conn , $sql); 
+    //if(!$res) {
+        //die("[-] Error while querying the category info");
+    //}
 ?>
 
 
@@ -136,7 +136,7 @@
                         <!-- Logo -->
                         <div class=" col-xl-3 col-lg-3 col-6">
                             <div class=" logo ">
-                                <a href="index.php"><img src="assets/img/logo/logo.png " alt=" " style="padding-top: 20px; padding-right: 0px;"></a>
+                                <a href="/"><img src="assets/img/logo/logo.png " alt=" " style="padding-top: 20px; padding-right: 0px;"></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 d-none d-md-block">
@@ -162,31 +162,19 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <div class="input-group" id="input" style="position:absolute;top:30%;left:0%;">
+                                            <div class="input-group" id="input" style="position:absolute;top:30%;left:30%;">
                                                 <form action="search-page.php" method="POST">
-                                                    <input style="position:absolute;left:0%;width:60%;top:2px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
-                                                <div class="input-group-append" style="position:absolute;left:60%;">
-                                                <div class="d-none d-md-block">
-                                                          <select data-trigger="" name="category" id="category">
-                                                            <option placeholder="">ALL Type</option>
-                                                                <?php
-                                                                    while($row = mysqli_fetch_assoc($res)) {
-                                                                        echo '<option>'.$row['category'].'</option>';
-                                                                    }
-                                                                ?>
-                                                          </select>
-                                                          </div>
-                                                  <button class="btn btn-secondary" type="submit" name="submit">
+                                                    <input style="position:absolute;left:0%;width:90%;top:2px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
+                                                  <button style="position:absolute;left:90%;height:40px;"class="btn btn-secondary" type="submit" name="submit">
                                                     <i class="fa fa-search">
                                                     </i>
                                                   </button>
                                                 </form>
-                                                </div>
                                             </div>
                                             <!--
                                                         search results will be  displayed here 
                                                     -->
-                                            <ul id="output" style="position:absolute;left:27%;top:305%;">
+                                            <ul id="output" style="position:absolute;left:29%;top:305%;">
                                             </ul>
                                         </li>
                                     </ul>
