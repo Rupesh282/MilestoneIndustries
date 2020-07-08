@@ -46,40 +46,12 @@
         <div class="slider-area ">
             <div class="slider-active ">
                 <!-- Single Slider -->
-                <div class="single-slider slider-height d-flex align-items-center " style="background: url(/assets/img/hero/Banner_1.jpg) no-repeat center center;">
-                    <!-- <div class="container ">
-                        <div class="row ">
-                            <div class="col-xl-8 col-lg-7 col-md-8 ">
-                                <div class="hero__caption ">
-                                    <span data-animation="fadeInLeft " data-delay=".1s ">Some data goes here</span>
-                                    <h1 data-animation="fadeInLeft " data-delay=".5s ">Lorem Ipsum</h1>
-                                    <p data-animation="fadeInLeft " data-delay=".9s ">Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate<br> velit esscillumlore eu quife nrulla parihatur.</p>
-                                    Hero-btn
-                                    <div class="hero__btn " data-animation="fadeInLeft " data-delay="1.1s ">
-                                        <a href="industries.html " class="btn hero-btn ">Our Services</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                <div class="single-slider d-flex align-items-center ">
+                    <img src="/assets/img/hero/Banner_1.jpg" style="width:100vw;height:100%">
                 </div>
                 <!-- Single Slider -->
-                <div class="single-slider slider-height d-flex align-items-center " style="background-image: url(/assets/img/hero/Banner_2.jpg);background-repeat: no-repeat;background-position: center center;">
-                    <!-- <div class="container ">
-                        <div class="row ">
-                            <div class="col-xl-8 col-lg-7 col-md-8 ">
-                                <div class="hero__caption ">
-                                    <span data-animation="fadeInLeft " data-delay=".1s ">Hi</span>
-                                    <h1 data-animation="fadeInLeft " data-delay=".5s ">Sample Data</h1>
-                                    <p data-animation="fadeInLeft " data-delay=".9s ">Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate<br> velit esscillumlore eu quife nrulla parihatur.</p>
-                                    Hero-btn
-                                    <div class="hero__btn " data-animation="fadeInLeft " data-delay="1.1s ">
-                                        <a href="industries.html " class="btn hero-btn ">Our Services</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                <div class="single-slider d-flex align-items-center ">
+                    <img src="/assets/img/hero/Banner_2.jpg" style="width:100vw;height:100%">
                 </div>
             </div>
         </div>
@@ -101,7 +73,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p1.png " alt=" " style="width: 75px;">
+                                        <img src="assets/img/gallery/p1.png " alt=" " style="width: 90px;">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Mixer Grinder</a></h3>
@@ -121,7 +93,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p2.png " alt=" " style="width: 50px;">
+                                        <img src="assets/img/gallery/p2.png " alt=" " style="width: 90px;">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Hand Blender</a></h3>
@@ -157,7 +129,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p4.png " alt=" " style="width:50px">
+                                        <img src="assets/img/gallery/p4.png " alt=" " style="width:70px">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Tower Fan</a></h3>
@@ -174,7 +146,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p5.png " alt=" " style="width:140px;">
+                                        <img src="assets/img/gallery/p5.png " alt=" " style="width:160px;">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Pressure Cooker</a></h3>
@@ -212,7 +184,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p7.png " alt=" " style="width: 150px;">
+                                        <img src="assets/img/gallery/p7.png " alt=" " style="width: 200px;">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Stainless&nbsp;Steel&nbsp;Kitchenware</a></h3>
@@ -230,7 +202,7 @@
                             <div class="cat-cap ">
                                 <div class="single-team ">
                                     <div class="team-img ">
-                                        <img src="assets/img/gallery/p8.png " alt=" " style="width:180px;">
+                                        <img src="assets/img/gallery/p8.png " alt=" " style="width:210px;">
                                     </div>
                                     <div class="team-caption ">
                                         <h3><a href="# ">Gas Stove</a></h3>

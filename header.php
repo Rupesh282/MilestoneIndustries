@@ -145,11 +145,11 @@
                                 <div class="main-menu">
                                     <nav>
                                         <ul class="tagline" style="white-space: nowrap; right: 100px;bottom: -30px;position: absolute;">
-                                            <li><a style="font-size: 20px;">EXPORTS</a></li>
+                                            <li><a style="font-size: 18px;">EXPORTS</a></li>
                                             <li>|</li>
-                                            <li><a style="font-size: 20px;">DISTRIBUTION</a></li>
+                                            <li><a style="font-size: 18px;">DISTRIBUTION</a></li>
                                             <li>|</li>
-                                            <li><a style="font-size: 20px;">ONLINE</a></li>
+                                            <li><a style="font-size: 18px;">ONLINE</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -235,11 +235,20 @@
                                                 <li><a href="# ">Blackstone</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">CONTACT US</a></li>
+                                        <li><a href="about.php">ABOUT US</a></li>
                                         <li>
                                             <a href="#social">SOCIAL</a>
+                                            <ul class="submenu" style="width: 120px;">
+                                                <li><a href="updating.php">Twitter</a></li>
+                                                <li><a href="updating.php">Facebook</a></li>
+                                                <li><a href="updating.php">Whatsapp</a></li>
+                                                <li><a href="updating.php">Instagram</a></li>
+                                                <li><a href="updating.php">Youtube</a></li>
+                                                <li><a href="updating.php">Blogpost</a></li>
+                                                <li><a href="updating.php">Pinterest</a></li>
+                                            </ul>
                                         </li>
-                                        <li><a href="about.php">ABOUT US</a></li>
+                                        <li><a href="contact.php">CONTACT US</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -249,7 +258,7 @@
                             <ul>
                                 <li>
 
-                                    <div id="google_translate_element" style="position:absolute;right:10%;top:10%" class=""></div>
+                                    <div id="google_translate_element" style="position:absolute;right:10%;top:10%" class="d-none d-md-block"></div>
 
                                     <script type="text/javascript">
                                         function googleTranslateElementInit() {
