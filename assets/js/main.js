@@ -61,8 +61,7 @@
             dots: false,
             fade: false,
             arrows: false,
-            adaptiveHeight: true,
-            variableWidth: true,
+            adaptiveHeight: false,
             // prevArrow: '<button type="button" class="slick-prev"><i class="ti-arrow-left"></i></button>',
             // nextArrow: '<button type="button" class="slick-next"><i class="ti-arrow-right"></i></button>',
             responsive: [{
