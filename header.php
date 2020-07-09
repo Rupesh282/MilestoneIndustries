@@ -164,8 +164,8 @@
                                         <li>
                                             <div class="input-group" id="input" style="position:absolute;top:30%;left:30%;">
                                                 <form action="search-page.php" method="POST">
-                                                    <input style="position:absolute;left:0%;width:90%;top:2px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
-                                                  <button style="position:absolute;left:90%;height:40px;"class="btn btn-secondary" type="submit" name="submit">
+                                                    <input style="position:absolute;right:35%;width:70%;top:2px;" type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
+                                                  <button style="position:absolute;right:105%;height:40px;"class="btn btn-secondary" type="submit" name="submit">
                                                     <i class="fa fa-search">
                                                     </i>
                                                   </button>
