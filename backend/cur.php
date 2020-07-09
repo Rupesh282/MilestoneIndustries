@@ -1,19 +1,20 @@
 <style>
 .service-list {
-list-style-type: none;
-margin-left:0px;
-padding-left:0px;
-display: inline-block;
+    list-style-type: none;
+    margin-left:0px;
+    padding-left:0px;
+    display: inline-block;
+    width:180%;
 }
 .service-list img
 {
-margin:2px;
-float:left;
+    margin:2px;
+    float:left;
 }
 .service-list a{
     margin:0px;
     text-align: center; 
-    width:400px;
+    width:100%;
     display:inline-block;
     padding: 0px;
 }
@@ -44,14 +45,13 @@ float:left;
 
 
     //replace white spaces in string with '+' sign (for using in url)
-    //TODO:  use json here (bug : '+' sign comes when there is space in name of product)
     function repSpace($string) {
         $string = preg_replace('/\s+/', '+', $string);
         return $string;
     }
 
 
-    $cat = $_POST['category'];
+    //$cat = $_POST['category'];
 
 
     //This is how you get categroy from index.php
@@ -67,16 +67,16 @@ float:left;
 
     if(isset($_POST['searchVal'])) {
         $sch = $_POST['searchVal'];
-        if($cat!="ALL Type") {
-            $sql = "select * from $product_table where $product_name like '%$sch%' AND $category='$cat' LIMIT 4";
-        }
-        else {
-            $sql = "select * from $product_table where $product_name like '%$sch%' LIMIT 4";
-        }
+        //if($cat!="ALL Type") {
+            //$sql = "select * from $product_table where $product_name like '%$sch%' AND $category='$cat' LIMIT 4";
+        //}
+        //else {
+            $sql = "select * from $product_table where $product_name like '%$sch%' LIMIT 5";
+        //}
         if($res = mysqli_query($conn , $sql)) {
             $count = mysqli_num_rows($res);
             if($count==0) {
-                $output = "<li class='service-list'><a href='#'>There are no search results !!</a></li>";
+                $output = "<li class='service-list' style='width:290%;'><a href='#'>Not found</a></li>";
             }
             else {
                 while($row = mysqli_fetch_array($res)) {

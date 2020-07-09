@@ -28,6 +28,12 @@
     $category_table = "categories";
     $category_name  = "category";
 
+
+    $sender_email = '';
+    $sender_password = '';
+
+
+
     //this is product files path
     //put path of your products directory here ..
     $PATH = 'products';
