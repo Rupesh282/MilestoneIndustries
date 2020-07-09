@@ -46,13 +46,17 @@
         <div class="slider-area ">
             <div class="slider-active ">
                 <!-- Single Slider -->
-                <div class="single-slider d-flex align-items-center ">
-                    <img src="/assets/img/hero/Banner_1.jpg" style="width:100vw;height:100%">
-                </div>
-                <!-- Single Slider -->
-                <div class="single-slider d-flex align-items-center ">
-                    <img src="/assets/img/hero/Banner_2.jpg" style="width:100vw;height:100%">
-                </div>
+                <?php
+                    $path = './assets/img/hero';
+                    $files = glob($path.'/Banner_*');
+                    $n = count($files);
+                    for($i=1;$i<=$n;$i++)
+                    {
+                        echo '<div class="single-slider d-flex align-items-center ">';
+                        echo '<img src="/assets/img/hero/Banner_'.$i.'.jpg" style="width:100vw;height:100%">';
+                        echo '</div>';
+                    }
+                ?>
             </div>
         </div>
         <!-- slider Area End-->

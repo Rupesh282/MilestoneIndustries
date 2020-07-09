@@ -6229,31 +6229,25 @@ hero-btn {
 .footer-area .footer-social a:first-child {
     margin-left: 0px;
 }
-.footer-area .footer-social a:nth-child(1):hover {
+.footer-area .footer-social a:nth-child(2):hover {
     color: #55acee;
 }
-.footer-area .footer-social a:nth-child(2):hover {
+.footer-area .footer-social a:nth-child(3):hover {
     color: #18147F;
 }
-.footer-area .footer-social a:nth-child(3):hover {
+.footer-area .footer-social a:nth-child(4):hover {
     color: #4ACD3E;
 }
-.footer-area .footer-social a:nth-child(4):hover {
+.footer-area .footer-social a:nth-child(5):hover {
     color: #C03F7C;
 }
-.footer-area .footer-social a:nth-child(5):hover {
+.footer-area .footer-social a:nth-child(6):hover {
     color: #E81616;
 }
-
-/*.footer-area .footer-social a:nth-child():hover {*/
-
-/*color: #EAAA47;*/
-
-/*}*/
-.footer-area .footer-social a:nth-child(6):hover {
+.footer-area .footer-social a:nth-child(7):hover {
     color: #CF772A;
 }
-.footer-area .footer-social a:nth-child(7):hover {
+.footer-area .footer-social a:nth-child(8):hover {
     color: #E81616;
 }
 
