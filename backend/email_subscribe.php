@@ -25,7 +25,7 @@
             $mail->Port       = '465';                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
             //Recipients
-            $mail->setFrom($sender_mail , 'Milstone Industries');
+            $mail->setFrom($sender_mail , 'Milestone Industries');
 
             $mail->addAddress($reciever_mail);               // Name is optional
 
@@ -39,8 +39,8 @@
 
             //TODO : add link for unsubscribe here
             $mail->Body    = '
-                <h2>Greetings From Milstone , <br>
-                You have subscriberd to our channel successfully !!!
+                <h2>Greetings From Milestone , <br>
+                You have subscribed to our channel successfully !!!
                 </h2>
                 <h3><a href="www.amazon.in">Click here to unsubscribe</a></h3>
             ';
