@@ -55,7 +55,16 @@
     if(!mysqli_query($conn , $sql)) {
         die("[-] TABLE CREATION ERROR -> category table");
     }
-    
+    $sql = "create table $otp_table(email VARCHAR(30) , code VARCHAR(20) , time TIMESTAMP);";
+    if(!mysqli_query($conn , $sql)) {
+        die("[-] TABLE CREATION ERROR -> otp table");
+    }
+
+    $sql = "create table $feedback_table(message VARCHAR(240), name VARCHAR(50) , email VARCHAR(50) , subject VARCHAR(100) , cellno VARCHAR(20))"
+    if(!mysqli_query($conn , $sql)) {
+        die("[-] TABLE CREATION ERROR -> feedback table");
+    }
+        
     die("DATABASE INSTALLATION SUCCESSFUL !!");
 
 ?>

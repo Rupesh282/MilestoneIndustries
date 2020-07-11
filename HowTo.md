@@ -49,6 +49,12 @@ This will copy all data from previous server to new one including all entries in
 - also before checking in you local machine , change path in `base` tag present in header
   in show.php to your assets folder containing css (relative to root dir)
 
+- give permission to assets/img/hero/ folder using `sudo chown -R www-data <folder_path>` for managing banners from admin panel
+
+- for checking email fucntionality :
+    1 )  add sender email and password in  loginfo.php
+    2 ) allow **less secure login** for your email account from account settings
+
 
 
 
