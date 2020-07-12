@@ -38,6 +38,8 @@
 <!-- All boostrap crap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+<link rel="stylesheet" type="text/css" href="../assets/css/admin-style.css">
+
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -123,8 +125,10 @@ float:left;
     <form action="manage.php" method="POST">
         <input type="submit" name="submit" class="btn btn-danger" value="back">
     </form>
+    <center>
+    <div class="delete-category">
 
-<center> <h2>Delete Category</h2> </center>
+ <h1>Delete Category</h1> 
 
 <?php 
     
@@ -146,7 +150,7 @@ float:left;
 
     if(isset($_POST["delete"])) {
         $catname = $_POST['category'];
-
+        echo '<div class="del-display"><h4>';
 
         //first take products from database then delete their folders
         $sql = "select * from $product_table where $category='$catname'";
@@ -156,7 +160,7 @@ float:left;
             while($row = mysqli_fetch_assoc($alldata)) {
                 //deleting folder of product
                 $productFile = $row[$product_file];
-                echo '-'.$row[$product_name].'<br>';
+                echo '<p>'.$row[$product_name].'</p>';
                 $filePath = $rPATH.'/'.$productFile.'/';
                 delete_files($filePath);
             }
@@ -182,13 +186,14 @@ float:left;
 
 
     }
-
+echo '</h4></div>'
 
 
 ?>
-
+</div>
+    <div class="del-cat">
     <form action="delete_category.php" method="POST">
-      Category type : 
+      <p>Category type :
       <select data-trigger=""  name="category">
             <option placeholder="">ALL Type</option>
             <?php
@@ -197,8 +202,11 @@ float:left;
                 }
             ?>
       </select>
-      <br><br>
-        <input type="submit" value="delete" name="delete">
-        <h4>warning : all products with this category will be deleted !</h4>
+    </p>
+
+        <input type="submit" value="delete" name="delete" class="btn btn-danger" style="margin-bottom: 10px;">
+        <h5>Warning : all products with this category will be deleted!</h5>
     </form>
+</div>
+</center>
 

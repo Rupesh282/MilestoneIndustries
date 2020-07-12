@@ -106,6 +106,9 @@
             <form action="change_banner.php" method="POST">
                 <input type="submit" value="BANNER SETTINGS" class="btn btn-success" id="btn" name="submit">
             </form>
+            <form action="feedback.php" method="POST">
+                <input type="submit" value="SEE FEEDBACK" class="btn btn-success" id="btn" name="submit">
+            </form>
           </div>';
 ?>
 </center>

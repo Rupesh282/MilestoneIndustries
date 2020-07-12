@@ -26,32 +26,7 @@
     $allcat = mysqli_query($conn , $sql);
 
     
-    if(isset($_POST["add"])) {
-
-        $cat_name = $_POST['category'];
-
-        if(empty($cat_name)) {
-            echo "text box is empty !!";
-        } else {
-            $sql = "select * from $category_table where $category_name='$cat_name'";
-            $res = mysqli_query($conn , $sql);
-            if($res) {
-                $cnt = mysqli_num_rows($res);
-                if($cnt>0) {
-                    echo "Already present !!";
-                } else {
-                        $sql = "insert into $category_table values('$cat_name');";
-                        if(!mysqli_query($conn , $sql)) {
-                            echo  "[-] Error while adding category!!";
-                        }
-                        echo "Category added successfully !!";
-                }
-            } else {
-                echo "[-] Error while querying in category table";
-            }
-
-        }
-    }
+    
 
 ?>
 
@@ -61,6 +36,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="../assets/css/admin-style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -92,25 +68,59 @@
     <form action="manage.php" method="POST">
         <input type="submit" name="submit" class="btn btn-danger" value="back">
     </form>
-    <div>
-                Add category : 
+    <center>
+    <div class="add-category">
+               <h2> Add category : </h2> 
             <form action="add_category.php" method="POST">
-                <input type="text" name="category" placeholder="type here ..">
-                <input type="submit" value="add" name="add">
+                <input type="text" name="category" placeholder="type here .." class="category-text">
+                <input type="submit" value="ADD" name="add" class="category-submit">
             </form>
-            
+            <div class="list-cat">
             <?php
-                echo "*** Currently present categories ***<br>"; 
+                echo "<h4>Currently present categories:</h4>";
+
                 if(mysqli_num_rows($allcat)==0) {
-                    echo "NONE<br>";
+                    echo "<p>NONE</p>";
                 } else {
                     while($row = mysqli_fetch_assoc($allcat)) {
-                        echo $row['category'].'<br>';
+                        echo '<p>'.$row['category'].'</p>';
                     }
                 }
+
+        echo '</div> 
+        <div class="display-message">';
                 
+        if(isset($_POST["add"])) {
+
+        $cat_name = $_POST['category'];
+
+        if(empty($cat_name)) {
+            echo "<p>text box is empty !!</p>";
+        } else {
+            $sql = "select * from $category_table where $category_name='$cat_name'";
+            $res = mysqli_query($conn , $sql);
+            if($res) {
+                $cnt = mysqli_num_rows($res);
+                if($cnt>0) {
+                    echo "<p>Already present !!</p>";
+                } else {
+                        $sql = "insert into $category_table values('$cat_name');";
+                        if(!mysqli_query($conn , $sql)) {
+                            echo  "[-] Error while adding category!!";
+                        }
+                        echo "<p>Category added successfully !!</p>";
+                }
+            } else {
+                echo "<p>[-] Error while querying in category table</p>";
+            }
+
+        }
+    }
+        echo '</div>';
             ?>
-    </div>
+        </div>
+    <!-- </div> -->
+    </center>
 </body>
 </html>
 
