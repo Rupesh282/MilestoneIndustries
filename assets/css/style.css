@@ -9790,6 +9790,8 @@ div.logo a img {
     }
     
     .footer-area .footer-top .single-footer-caption .sub-box {
+        right: 20%;
+        left: 20%;
         bottom: 50%;
     }
     
