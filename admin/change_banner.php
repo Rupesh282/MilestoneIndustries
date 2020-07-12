@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="../assets/css/admin-style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,30 +23,32 @@
         <input type="submit" name="submit" class="btn btn-danger" value="back">
     </form>
 
-    <center> <h2> banner settings </h2> </center>';
+    <div class="banner-admin-title"><center> <h2> Banner settings </h2> </center></div>';
 
     //This section shows the admin the images currently available for display
     $imagespath = '../assets/img/hero/';
 
     $files = glob($imagespath."*.*");
-
-    echo '<div class="show-image">';
+    echo '<center><div class="banner-change">';
+    echo '<div class="banner-preview">';
     echo "Images you have currently for display as banner: <br><br>";
     foreach($files as $image) {
         echo basename($image);
         echo '<br>';
-        echo '<img width="200px" src='.$image.'>';
+        echo '<img width="200px" src='.$image.' style="margin-bottom: 10px; border: solid 2px #000">';
         echo '<br>';
     }
 
-    echo '<br>
+    echo '</div><br>
+    <div class="banner-delete">
     <form action="change_banner.php" method="POST">
     Enter name of image to delete it : 
-        <input style="width:20%" type="text" class="form-control" name="image"  autocomplete="off" placeholder="Enter the name of image to delete"><br>
+        <input style="width:80%" type="text" class="form-control" name="image"  autocomplete="off" placeholder="    Enter the name of image to delete"><br>
         <input type="hidden" name="path" value="'.$imagespath.'">
         <input type="submit" class="btn btn-primary" name="delete" value="Delete">
     </form>
-    <br>';
+    <br>
+    </div>';
 
         if(isset($_POST['delete'])) {
             $imagename = $_POST['image'];
@@ -56,15 +59,17 @@
             header("Refresh:0");
         } 
 
-    echo '<form action="change_banner.php" method="POST">
+    echo '
+    <div class="banner-rename">
+    <form action="change_banner.php" method="POST">
         Enter name of image to rename : 
-        <input style="width:20%"type="text" class="form-control" name="old_name"  autocomplete="off" placeholder="old name"><br>
+        <input style="width:80%"type="text" class="form-control" name="old_name"  autocomplete="off" placeholder="old name"><br>
         Enter name of new image : 
-        <input style="width:20%"type="text" class="form-control" name="new_name"  autocomplete="off" placeholder="new name"><br>
+        <input style="width:80%"type="text" class="form-control" name="new_name"  autocomplete="off" placeholder="new name"><br>
         <input type="hidden" name="path" value="'.$imagespath.'">
         <input type="submit" class="btn btn-primary" name="rename" value="Rename">
     </form>
-    <br>';
+    <br></div>';
 
         if(isset($_POST['rename'])) {
             $oldname = $_POST['old_name'];
@@ -76,13 +81,14 @@
 
      echo '<form action="change_banner.php" enctype="multipart/form-data" method="post">
     
-        <div>
+        <div class="banner-add">
             <label for="upload">Add Attachments:</label>
             <input id="upload" name="upload[]" type="file" multiple="multiple" />
+            <br>
+
+        <p><input type="submit" name="add" value="Submit" class="btn btn-primary" style="margin-top: 10px;"></p>
+
         </div>
-
-        <p><input type="submit" name="add" value="Submit"></p>
-
     </form>
     ';
 
@@ -134,13 +140,14 @@
         $array = json_decode($jsondata,true);
         $time = $array["timeout"]["time"];
         echo '<br>
+        <div class="banner-timer"
         <form action="change_banner.php" method="POST">
         current banner time :'.$time.'          <br>
         set banner time : 
             <input style="width:20%" type="text" class="form-control" name="time"  autocomplete="off" placeholder="Time in ms"><br>
-            <input type="submit" class="btn btn-primary" name="banner_time" value="change time">
+            <input type="submit" class="btn btn-primary" name="banner_time" value="change time" >
         </form>
-        <br>';
+        <br></div>';
 
         if(isset($_POST["banner_time"])) {
             $new_time = $_POST['time'];
@@ -150,5 +157,6 @@
             header("Refresh:0");
         }
 
-    echo '</div>';
+    echo '</div>
+    <center>';
 ?>
