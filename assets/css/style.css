@@ -9722,6 +9722,22 @@ del {
 div.logo a img {
     width: 80%;
 }
+.input-group .form-control {
+    position: absolute;
+    right: 35%;
+    width: 80%;
+    top: 2px;
+}
+.input-group .btn-secondary {
+    position: absolute;
+    right: 115%;
+    height: 40px;
+}
+#output {
+    position: absolute;
+    right: 45%;
+    top: 305%;
+}
 @media screen and (max-width: 600px) {
     ul.tagline {
         visibility: hidden;
@@ -9739,7 +9755,7 @@ div.logo a img {
     
     .mobile_menu {
         padding-top: 15px;
-        padding-right: 30px;
+        padding-right: 0px;
     }
     
     .form-contact .form-msg textarea {
@@ -9791,6 +9807,32 @@ div.logo a img {
     .footer-area .footer-bottom {
         padding-right: 5%;
         padding-left: 0%;
+    }
+    
+    .input-group .form-control {
+        width: 40% !important;
+        right: 55%;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    /* When the input field gets focus, change its width to 100% */
+    
+    .input-group .form-control:focus {
+        width: 80% !important;
+    }
+    
+    .input-group .btn-secondary {
+        right: 35%;
+    }
+    
+    #output {
+        position: absolute;
+        right: 70%;
+        top: 305%;
+    }
+    
+    .service-list {
+        width: 150% !important;
     }
 }
 .sticky {

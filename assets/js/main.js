@@ -271,3 +271,8 @@
 $(window).load(function() {
     $(".header-stick").sticky({ topSpacing: 0 });
 });
+
+$("#button").click(function() {
+    $("#bar").show();
+    $("button").hide();
+});

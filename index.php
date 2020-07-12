@@ -223,11 +223,10 @@
         <!--? About Area Start-->
         <!-- About Area End-->
         <!--? Services Ara Start -->
-        <div class="services-area section-padding-new ">
+        <!-- <div class="services-area section-padding-new ">
             <div class="container ">
                 <div class="row ">
                     <div class="cl-xl-7 col-lg-12 col-md-10 ">
-                        <!-- Section Tittle -->
                         <div class="section-tittle mb-20 ">
                             <h2>Our Best Services</h2>
                         </div>
@@ -258,7 +257,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Services Ara End -->
         <!--? Testimonial Start -->
         <!-- Testimonial End -->
@@ -392,7 +391,7 @@ include("footer.html");
     <script src="./assets/js/jquery.ajaxchimp.min.js "></script>
 
     <!-- Jquery Plugins, main Jquery -->
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <!--this is for changing timeout of banners from backend-->
     <script>
         var time = {
