@@ -28,10 +28,13 @@
     $category_table = "categories";
     $category_name  = "category";
 
+    $otp_table = "otp";
+    $feedback_table = "feedback";
 
     $sender_email = '';
     $sender_password = '';
 
+    $otpTime = 2;
 
 
     //this is product files path

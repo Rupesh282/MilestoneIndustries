@@ -281,7 +281,10 @@
                     </script>
 
                 </div>
-                    <?php include 'contact-form.html';  ?>
+
+                    <!--contact form -->
+                    <?php require_once "contact-form.html"; ?>
+                    
                     <div class="col-lg-3 offset-lg-1">
                         <h5>Corporate Office:</h5><br>
                         <div class="media contact-info">
