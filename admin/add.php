@@ -128,6 +128,12 @@
             <input type="text" class="form-control" name="nblades"          autocomplete="off" placeholder="Number Of blades"><br>
             <input type="text" class="form-control" name="bodyshape"        autocomplete="off" placeholder="Body shape"><br>
             <input type="text" class="form-control" name="additionalinfo"   autocomplete="off" placeholder="Additional Info"><br>
+            <textarea class="form-control rounded-0" placeholder="This will be shown on side panel" autocomplete="off" name="sideinfo" rows="3"></textarea>
+            <br>
+            
+            <input type="text" class="form-control" name="vproduct_link"   autocomplete="off" placeholder="insert link including http">
+
+            <br>
         </div>
         <br>
 

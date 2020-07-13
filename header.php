@@ -164,7 +164,7 @@
                                         <li>
                                             <div class="input-group" id="input" style="position:absolute;top:30%;left:30%;">
                                                 <form action="search-page.php" method="POST">
-                                                    <input type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off">
+                                                    <input type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off" required>
                                                   <button class="btn btn-secondary" type="submit" name="submit">
                                                     <i class="fa fa-search">
                                                     </i>
@@ -223,7 +223,7 @@
                                                 <li><a href="# ">Blackstone</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.php">ABOUT US</a></li>
+                                        <li><a href="about">ABOUT US</a></li>
                                         <li>
                                             <a href="#">SOCIAL</a>
                                             <ul class="submenu" style="width: 120px;">
@@ -236,7 +236,7 @@
                                                 <li><a href="updating.php">Pinterest</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">CONTACT US</a></li>
+                                        <li><a href="contact">CONTACT US</a></li>
                                     </ul>
                                 </nav>
                             </div>
