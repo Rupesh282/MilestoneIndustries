@@ -1,5 +1,15 @@
+<base href="/"/>
+<!--<base href="/Milstone/MilestoneIndustries/"/>-->
+
+<script src="jquery-3.5.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 <!doctype html>
-<html class="no-js" lang="zxx">
+
+
+
+<html class="no-js" lang="zxx"> 
 
 <head>
     <meta charset="utf-8">
@@ -281,9 +291,143 @@
                     </script>
 
                 </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#ValidateOtp,#otpinfo").click(function(e) {
+                            e.preventDefault();
+                            if($("#otpValue").val()=='') {
+                                return;
+                            }
+                            var message = $("#message").val();
+                            var email = $("#email").val();
+                            var name = $("#name").val();
+                            var subject = $("#subject").val();
+                            var cellno = $("#cellno").val();
+                            var ValidateOtp = $("#ValidateOtp").val(); 
+                            var otpValue = $("#otpValue").val();
+                            $("#otp-status").html("");
+                            $("#fillform").html("");
+                            $.ajax({
+                                type: "POST",
+                                url: "contact_process.php",
+                                dataType: "json",
+                                data: {
+                                    email: email,
+                                    message: message,
+                                    name: name,
+                                    subject: subject,
+                                    cellno: cellno,
+                                    ValidateOtp: ValidateOtp,
+                                    otpValue: otpValue
+                                },
+                                success: function(data) {
+                                    $("#otp-status").html(data);
+                                }
+                            });
+                        });
 
-                    <!--contact form -->
-                    <?php require_once "contact-form.html"; ?>
+                    });
+                </script>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#SubmitFeedback").click(function(e) {
+                            e.preventDefault();
+                            
+                            var message = $("#message").val();
+                            var email = $("#email").val();
+                            var name = $("#name").val();
+                            var subject = $("#subject").val();
+                            var cellno = $("#cellno").val();
+                            var submitForm = $("#SubmitFeedback").val(); 
+                            $("#fillform").html("");
+                            $("#otpinfo").html("");
+                            $("#otp-status").html("");
+                            $.ajax({
+                                type: "POST",
+                                url: "contact_process.php",
+                                dataType: "json",
+                                data: {
+                                    email: email,
+                                    message: message,
+                                    name: name,
+                                    subject: subject,
+                                    cellno: cellno,
+                                    submitForm: submitForm 
+                                },
+                                success: function(data) {
+                                    if(data=="0") {
+                                        data="Please fill all fields properly !";
+                                        $("#fillform").html(data);
+                                    } else {
+                                        $("#otpinfo").html(data);
+                                        $("#otp-status").html("OTP is sent");
+                                    }
+                                }
+                            });
+                        });
+
+                    });
+                </script>
+
+                <!--<form action="contact_process.php" method="POST" id="otp-submit">
+                    <input id="otpValue" type="text" name="otp" autocomplete="off" required>
+                    <input id="ValidateOtp" type="submit" value="submit OTP" name="ValidateOtp" >
+                    <input id="message" type="hidden" name="message" value="'.$_POST['message'].'" >
+                    <input id="name" type="hidden" name="name" value="'.$_POST['name'].'">
+                    <input id="email" type="hidden" name="email" value="'.$_POST['email'].'">
+                    <input id="subject" type="hidden" name="subject" value="'.$_POST['subject'].'">
+                    <input id="cellno" type="hidden" name="cellno" value="'.$_POST['cellno'].'">
+                </form>-->
+
+                <!--contact form -->
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="form-contact" action="contact_process.php" method="post" id="feedback">
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-msg">
+                                    <textarea name="message" id="message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"  required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-name">
+                                        <input  name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-email">
+                                        <input name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-subject">
+                                        <input name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject" required>
+                                    </div>
+                                </div> 
+                                <div class="col-sm-6">
+                                    <div class="form-subject">
+                                        <input name="cellno" style="width:100%" id="cellno" type="text" pattern="[0-9]+" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter you cellno'" placeholder="Cell No." required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <!--<button name="submit" type="submit" class="button button-contactForm boxed-btn-new">Send</button>-->
+                                <input type="submit" name="submit" value="SEND" id="SubmitFeedback">
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div id="otpinfo" style="position:absolute;bottom:29%;right:25%;">
+                    </div>
+                    <div id="otp-status" style="position:absolute;bottom:27%;right:39%;" >
+                    </div>
+                    <div id="fillform" style="position:absolute;bottom:30%;right:44%;" >
+                    </div>
                     
                     <div class="col-lg-3 offset-lg-1">
                         <h5>Corporate Office:</h5><br>
