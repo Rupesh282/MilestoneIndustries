@@ -8,20 +8,31 @@
 <!--for search box-->
 <style>
     #output {
+    	position: absolute;
+    	left: -10%;
         /* Remove default list styling */
         list-style-type: none;
         padding: 0;
-        margin: 0;
+        margin: 0px;
+        z-index: 999;
+    }
+
+    #output li {
+    	width: 150%;
     }
     
     #output li a {
+    	width: 100%;
         border: 1px solid #ddd;
+        border-radius: 5px;
         /* Add a border to all links */
         margin-top: -1px;
         /* Prevent double borders */
         background-color: #f6f6f6;
         /* Grey background color */
-        padding: 12px;
+        padding-left: 20%;
+        padding-top: 10px;
+        padding-bottom: 5px;
         /* Add some padding */
         text-decoration: none;
         /* Remove default text underline */
