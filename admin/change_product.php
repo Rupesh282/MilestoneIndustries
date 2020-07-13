@@ -114,6 +114,7 @@
      $row = mysqli_fetch_array($res);
      $productFile   = $row[$product_file];
      $productName = $row[$product_name];
+     $sideinfo = $row[$product_sideinfo];
 
      //also get the name of mainFrame image from database
      $mainimage = $row[$mainFrame];
@@ -142,6 +143,7 @@
     $Attr[17] = $array['data']['bodyshape'];       
     $Attr[18] = $array['data']['additionalinfo'];  
     $Attr[19] = $array['data']['category'];  
+    $Attr[20] = $array['data']['link'];  
 
      //add here and in input box if there are any new attributes
      
@@ -218,6 +220,11 @@
             <input type="text" class="form-control" name="bodyshape"        value="<?php echo $Attr[17]; ?>"    autocomplete="off" placeholder="Body shape"><br>
             <label for="usr">additionalinfo : </label>
             <input type="text" class="form-control" name="additionalinfo"   value="<?php echo $Attr[18]; ?>"   autocomplete="off" placeholder="Additional Info"><br>
+            <label for="usr">sidepanel info: </label>
+            <textarea class="form-control rounded-0" placeholder="This will be shown on side panel" autocomplete="off" name="sideinfo" rows="3"><?php echo $sideinfo; ?></textarea>
+            <br>
+            <label for="usr">link : </label>
+            <input type="text" class="form-control" name="vproduct_link"   value="<?php echo $Attr[20]; ?>"   autocomplete="off" placeholder="product link"><br>
             <label for="usr">newmainframe : </label>
             <input type="text" class="form-control" name="newmainframe"   value="<?php echo $mainimage; ?>"   autocomplete="off" placeholder="Name of mainFrame Image"><br>
         </div>

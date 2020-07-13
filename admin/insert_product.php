@@ -96,6 +96,10 @@
         //$path = '../../rn/trial/products/';
 
 
+        //take sideinfo here
+        $sideinfo = trim($_POST['sideinfo']);
+
+
         //first create a folder
         //then create another folder of photos inside it
         //then create a file named info.json inside folder
@@ -211,6 +215,9 @@
         if ($_POST['category']) {
             $array['category'] = $_POST['category'];
         }
+        if ($_POST['vproduct_link']) {
+            $array['link'] = $_POST['vproduct_link'];
+        }
 
         $json = json_encode(array('data' => $array), JSON_PRETTY_PRINT);
     
@@ -224,7 +231,7 @@
         //now add product to sql database 
         //add name of product and its foldername
         $folder_name = str_replace(' '  , '' , $PrName);
-        $sql = "insert into $product_table($product_file, $product_name,$category) values('$folder_name' , '$PrName' , '$catname')";
+        $sql = "insert into $product_table($product_file, $product_name,$category,$product_sideinfo) values('$folder_name' , '$PrName' , '$catname' , '$sideinfo')";
         if(mysqli_query($conn , $sql)) {
             echo "[+] Product added to sql successfully !!";
         } else {

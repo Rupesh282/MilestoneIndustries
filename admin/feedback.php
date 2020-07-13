@@ -58,9 +58,10 @@
         echo "name : ".$row['name']."<br>";
         echo "subject : ".$row['subject'];
         echo '<p style="white-space: pre-line">';       
-            echo "Message : <br>".$row['message'];
+        echo "Message : <br>".$row['message'];
         echo '</p>';
         echo "cellno : ".$row['cellno']."<br><br>";
+        echo "email : ".$row['email']."<br><br>";
         echo '<form action="feedback.php" method="post">';
         echo '<input type="submit" value="delete" name="delete">';
         echo '<input type="hidden" value="'.$row['message'].'" name="message">';

@@ -18,7 +18,7 @@
     $product_database	= "products";
 	$product_table  = "product";
     $product_name   = "prod_name";
-    $product_info   = "prod_description";
+    $product_sideinfo   = "prod_description";
     $product_id     = "id";
 	$product_file   = "prod_file"; 
 	$mainFrame 		= "mainFrame";

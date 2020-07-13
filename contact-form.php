@@ -4,12 +4,12 @@
                         <h2 class="contact-title">Get in Touch</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact" action="contact_process.php" method="post"   target="_blank">
+                        <form class="form-contact" action="contact.php" method="post">
 
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-msg">
-                                        <textarea name="message" id="message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message" required></textarea>
+                                    <textarea name="message" id="message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message" required value="<?php echo $_POST['message']; ?>"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -40,3 +40,8 @@
                         </form>
                     </div>
                     
+<?php
+    if(isset($_POST['submit'])) {
+        require_once 'contact_process.php';
+    }
+?>

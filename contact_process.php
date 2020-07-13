@@ -1,28 +1,63 @@
+<?php
 
 
-<h3> A OTP is sent to your email address : <?php echo $_POST['email'];?> 
-  <br>Please submit it here , to verify your account. (OTP is valid for 3 minutes)
- </h3>
-<form action="contact_process.php" method="POST">
-    <input type="text" name="otp" autocomplete="off" required>
-    <input type="submit" value="submit OTP" name="ValidateOtp" >
-    <input type="hidden" name="message" value="<?php echo $_POST['message']; ?>" >
-    <input type="hidden" name="name" value="<?php echo $_POST['name']; ?>">
-    <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
-    <input type="hidden" name="subject" value="<?php echo $_POST['subject']; ?>">
-    <input type="hidden" name="cellno" value="<?php echo $_POST['cellno']; ?>">
-</form>
+    //for checking phone number formate
+    function validate_phone_number($phone)
+    {
+         // Allow +, - and . in phone number
+         $filtered_phone_number = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+         // Remove "-" from number
+         $phone_to_check = str_replace("-", "", $filtered_phone_number);
+         // Check the lenght of number
+         // This can be customized if you want phone number from a specific country
+         if (strlen($phone_to_check) < 10 || strlen($phone_to_check) > 14) {
+            return false;
+         } else {
+           return true;
+         }
+    }
 
-<form action="contact_process.php" method="POST">
-    <input type="submit" value="Resend OTP" name="ResendOtp" >
-    <input type="hidden" name="message" value="<?php echo $_POST['message']; ?>" >
-    <input type="hidden" name="name" value="<?php echo $_POST['name']; ?>">
-    <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
-    <input type="hidden" name="subject" value="<?php echo $_POST['subject']; ?>">
-    <input type="hidden" name="cellno" value="<?php echo $_POST['cellno']; ?>">
-</form>
+    if(isset($_POST['submitForm'])) {
+        $name = $_POST['name'];
+        $message = $_POST['message'];
+        $cellno = $_POST['cellno'];
+        $subject = $_POST['subject'];
+        $email = $_POST['email'];
+        if(empty($name) || empty($message) || empty($email) || empty($subject) || empty($cellno) || !validate_phone_number($cellno)
+        || !filter_var($email,FILTER_VALIDATE_EMAIL)) {
+            echo json_encode("0");
+            die("");
+        } else {
+               $output =  '<h6> A OTP is sent to your email address :  '.$_POST['email'].' 
+                  <br>Please submit it here , to verify your account. (OTP is valid for 3 minutes)
+                 </h6>
+                <form action="contact_process.php" method="POST" id="otp-submit">
+                    <input id="otpValue" type="text" name="otpValue" autocomplete="off" required>
+                    <input id="ValidateOtp" type="submit" value="submit OTP" name="ValidateOtp" >
+                    <input id="message" type="hidden" name="message" value="'.$_POST['message'].'" >
+                    <input id="name" type="hidden" name="name" value="'.$_POST['name'].'">
+                    <input id="email" type="hidden" name="email" value="'.$_POST['email'].'">
+                    <input id="subject" type="hidden" name="subject" value="'.$_POST['subject'].'">
+                    <input id="cellno" type="hidden" name="cellno" value="'.$_POST['cellno'].'">
+                </form>';
+
+                echo json_encode($output);
+        }
+    }
+    
+            //this is resend from (add if asked)
+                //<form action="contact_process.php" method="POST" id="otp-resend">
+                    //<input id="ResendOtp" type="submit" value="Resend OTP" name="ResendOtp" >
+                    //<input id="message" type="hidden" name="message" value="'.$_POST['message'].'" >
+                    //<input id="name" type="hidden" name="name" value="'.$_POST['name'].'">
+                    //<input id="email" type="hidden" name="email" value="'.$_POST['email'].'">
+                    //<input id="subject" type="hidden" name="subject" value="'.$_POST['subject'].'">
+                    //<input id="cellno" type="hidden" name="cellno" value="'.$_POST['cellno'].'">
+                //</form>
+?>
 
 <?php
+
 
 
     require_once 'loginfo.php';
@@ -32,13 +67,15 @@
     //Connection
     $conn = new mysqli($servername , $username , $password);
     if(!$conn) {
-        die("[-] Connection error with MySql");
+        echo json_encode("[-] Connection error with MySql");
+        die("");
     }
 
     //first use database
     $sql = "USE $product_database";
     if(!mysqli_query($conn , $sql)){
-        die("[-] Error while using database !!");
+        echo json_encode("[-] Error while using database !!");
+        die("");
     }
 
     function otpCleaner($conn , $otpTime , $otp_table) {
@@ -72,7 +109,7 @@
         for($i=0;$i<count($todelete);$i++) {
             $sql = "delete from $otp_table where email='".$todelete[$i]."'";
             if(!mysqli_query($conn ,$sql)) 
-                echo "[-]Error while cleaning otps";
+                echo json_encode("[-]Error while cleaning otps");
         }
     }
 
@@ -173,7 +210,7 @@
         //echo $date2;
         //echo '<br>';
 
-        if($row['code'] == $_POST['otp'] && $difTime <= $otpTime && $date1 == $date2) {
+        if($row['code'] == $_POST['otpValue'] && $difTime <= $otpTime && $date1 == $date2) {
             //otp verification is successful 
             //echo "<pre> SUCESSS </pre>";
             $sql = "delete from $otp_table where email='".$email."'";
@@ -183,33 +220,30 @@
                 $sql = "insert into $feedback_table(message , name , email , subject , cellno) values('".$message."' ,'".$name."' ,'".$email."' ,'".$subject."' ,'".$cellno."')";
                 $res = mysqli_query($conn , $sql);
                 if($res) {
-                    echo "<script>
-                    alert('Thank you for reaching out to us ! We have recieved your message.');
-                    window.close();
-                    </script>";
+                    echo json_encode("We have recieved your message , Thank you!");
                 }
             } 
             die("");
         } else {
-            echo "<pre> Try again !! OTP you provided is Incorrect </pre>";
+            $output = "Try again,OTP is wrong!!<br>";
             if($difTime > $otpTime || $date1!=$date2) {
                 //delete otp (timed out)
                 $sql = "delete from $otp_table where email='".$email."'";
                 $res = mysqli_query($conn , $sql);
-                die("<pre> Please generate a new otp , previous one is expired !!</pre>");
+                $output.="generate new OTP by sending the message again !";
             }
-            die("");
-        }
+            echo json_encode($output);
+            die(""); }
         //if otp is correct , redirect to previous page
     } else if(isset($_POST['ResendOtp'])) {
         //remove the previous otp from database 
         $sql = "delete from $otp_table where email='".$email."'";
         $res = mysqli_query($conn , $sql);
         if($res)
-            echo "new OTP sent to your email";
+            echo json_encode("new OTP sent to your email");
         else 
-            echo "[+] Error while sending new OTP";
-    } 
+            echo json_encode("[+] Error while sending new OTP");
+    }
 
     $otp = rand(100000, 999999);
     send_email($sender_email, $sender_password , $email , $otp);
