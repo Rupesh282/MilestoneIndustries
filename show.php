@@ -6,7 +6,7 @@
     <!-- when using in local machine , use path to the assets folder here instaed of "/" from root directoryy i.e. /www/html/-->
     <!-- ex : if your assets folder is /www/html/MilstoneIndustries/  the replace "/" by "/MilstoneIndustries/"-->
     <base href="/"/>
-    <!--<base href="/Milstone/MilestoneIndustries/"/>-->
+    <!--<base href="/Milstone/MilestoneIndustries/"/>--> 
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -46,7 +46,15 @@
     require_once "header.php" ; 
 ?>
 
-
+<script>
+    function copyToClipboard(element) {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+    }
+</script>
 <?php
     
     //path to product file (json , images)
@@ -86,6 +94,7 @@
     $mainframe   = $row[$mainFrame];
 
 
+    $sideinfo = $row['prod_description'];
 
 
     //first take mainFrame and set it on screeen
@@ -126,7 +135,8 @@
                                                 echo '<table class="table">';
                                                 foreach($array as $key=>$value) {
                                                     foreach($value as $k=>$v) {
-                                                        echo '<tr class="table-success"><td>'.$k.'</td><td>'.$v.'</td></tr>';
+                                                        if($k!='link')
+                                                            echo '<tr class="table-success"><td>'.$k.'</td><td>'.$v.'</td></tr>';
                                                     }
                                                 } 
                                                 echo '</table>';
@@ -141,38 +151,20 @@
                                 <h4 class="widget_title">Sample Menu</h4>
                                 <ul class="unordered-list">
                                     <li>
-                                        <a href="#" class="d-flex">
-                                            <p>A</p>
-                                        </a>
+                                        Category :
+                                            <p><?php echo $array['data']['category']; ?></p>
                                     </li>
                                     <li>
-                                        <a href="#" class="d-flex">
-                                            <p>B</p>
-                                        </a>
+                                            <p style="white-space: pre-line">
+                                                <?php
+                                                    echo $row['prod_description'];
+                                                ?>
+                                            </p>
                                     </li>
                                     <li>
-                                        <a href="#" class="d-flex">
-                                            <p>C</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>D</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>E</p>
-                                        </a>
-                                        <ul>
-                                            <li>Sub Item</li>
-                                            <li>Sub Item</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>F</p>
-                                        </a>
+                                            Link :
+                                            <a target="_blank" id="url" href="<?php echo $array['data']['link']; ?>"><?php echo $array['data']['link']; ?></a>
+                                            <button onclick="copyToClipboard('#url')" style="color:black;">copy link</button>
                                     </li>
                                 </ul>
                             </aside>
