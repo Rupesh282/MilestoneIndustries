@@ -2,3 +2,7 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^product/([a-zA-Z]+)/([0-9]+)  show.php?productId=$2 [L]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#RewriteRule ^about about.php [L]
+#RewriteRule ^contact contact.php [L]
