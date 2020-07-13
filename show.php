@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 </head>
 
 <body class="body-bg">
@@ -112,7 +113,7 @@
                 <div class="row">
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <article class="blog_item">
-                                <div class="slider-for">
+                                <div class="slider-for mb-5">
                                     <?php
                                         $n = count($images);
                                         for($i=0;$i<$n;$i++)
@@ -129,7 +130,7 @@
                                         for($i=0;$i<$n;$i++)
                                         {
                                             echo '<div>';
-                                            echo '<img src="'.$images[$i].'" style="height:100px">';
+                                            echo '<img src="'.$images[$i].'" style="height:100px; padding-left:10px; padding-right:10px;">';
                                             echo '</div>';
                                         }
                                     ?>

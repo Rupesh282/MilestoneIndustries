@@ -278,7 +278,7 @@
         infinite: true,
         arrows: false,
         asNavFor: '.slider-for',
-        dots: false,
+        dots: true,
         focusOnSelect: true,
         variableWidth: true
     });
