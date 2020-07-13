@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 </head>
 
 <body class="body-bg">
@@ -56,10 +57,9 @@
     }
 </script>
 <?php
-    
+    // echo $_SERVER['HTTP_HOST'];
     //path to product file (json , images)
     //$path = '../../rn/trial/products/';
-
     //take contents here from data to show products
     //create connection and fetch data of product from sql
     require_once "loginfo.php";
@@ -98,14 +98,15 @@
 
 
     //first take mainFrame and set it on screeen
-    $image = $PATH.'/'.$productfile.'/photos/'.$mainframe;
+    $main_image = $PATH.'/'.$productfile.'/photos/'.$mainframe;
+    $images = glob($PATH.'/'.$productfile.'/photos/*');
 
     //if main frame is not there , show a default image
-    if($mainframe=="" || !file_exists($image)) {
-        $image = $PATH.'/'.'dummy/default.png';
+    if($mainframe=="" || !file_exists($main_image)) {
+        $main_image = $PATH.'/'.'dummy/default.png';
     }
 
-
+    // print_r($images);
     $jsonfile = $PATH.'/'.$productfile."/info.json";
     $jsondata = file_get_contents($jsonfile);
     $array = json_decode($jsondata,true);
@@ -121,13 +122,32 @@
                 <div class="row">
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="<?php echo $image;?>" alt="" style="width: 250px;height:250px">                
-                                </div>                                 
+                                <div class="slider-for mb-5">
+                                    <?php
+                                        $n = count($images);
+                                        for($i=0;$i<$n;$i++)
+                                        {
+                                            echo '<div><a class = "img-pop-up" href="'.$images[$i].'">';
+                                            echo '<img class="card-img rounded-0" src="'.$images[$i].'" alt="" style="width: 100%;">';
+                                            echo '</a></div>';
+                                        }
+                                    ?>
+                                </div>
+                                <div class="slider-nav">
+                                    <?php
+                                        $n = count($images);
+                                        for($i=0;$i<$n;$i++)
+                                        {
+                                            echo '<div>';
+                                            echo '<img src="'.$images[$i].'" style="height:100px; padding-left:10px; padding-right:10px;">';
+                                            echo '</div>';
+                                        }
+                                    ?>
+                                </div>
                         </div>
                         <div class="col-lg-5 mb-5 mb-lg-0">
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="blog_details.html">
+                                    <a class="d-inline-block" href="#">
                                         <h2> <?php echo $productname; ?></h2>
                                     </a>
                                     <p>
@@ -208,7 +228,7 @@ include("footer.html");
     <script src="./assets/js/jquery.sticky.js "></script>
 
     <!-- counter , waypoint -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js "></script>
     <script src="./assets/js/jquery.counterup.min.js "></script>
 
     <!-- contact js -->
@@ -218,6 +238,19 @@ include("footer.html");
     <script src="./assets/js/mail-script.js "></script>
     <script src="./assets/js/jquery.ajaxchimp.min.js "></script>
 
+    <script>
+        var time = {
+            //this is global array (can be used by any js file)
+            <?php
+                $jsonfile = './assets/js/timeout.json';
+                $jsondata = file_get_contents($jsonfile);
+                $array = json_decode($jsondata,true);
+
+                $timeout = $array['timeout']['time'];
+                echo '  timeout : ' . '"' . $timeout. '",' . "\n";  
+            ?>
+        };
+    </script>
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js "></script>
     <script src="./assets/js/main.js "></script>

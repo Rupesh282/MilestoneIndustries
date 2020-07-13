@@ -39,7 +39,8 @@
         </div>
     </div>
 <?php
-    require_once "header.php" ; 
+    require_once "header.php" ;
+    // echo $_SERVER['HTTP_HOST'];
 ?>
     <main>
         <!-- slider Area Start-->
@@ -223,7 +224,7 @@
         <!--? About Area Start-->
         <!-- About Area End-->
         <!--? Services Ara Start -->
-        <!-- <div class="services-area section-padding-new ">
+        <div class="services-area section-padding-new ">
             <div class="container ">
                 <div class="row ">
                     <div class="cl-xl-7 col-lg-12 col-md-10 ">
@@ -257,7 +258,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Services Ara End -->
         <!--? Testimonial Start -->
         <!-- Testimonial End -->
@@ -406,7 +407,6 @@ include("footer.html");
             ?>
         };
     </script>
-
     <script src="./assets/js/plugins.js "></script>
     <script src="./assets/js/main.js"></script>
 

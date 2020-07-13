@@ -263,7 +263,25 @@
         time: 3000
     });
 
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav',
+        adaptiveHeight: true
+    });
 
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        asNavFor: '.slider-for',
+        dots: true,
+        focusOnSelect: true,
+        variableWidth: true
+    });
 
 })(jQuery);
 
