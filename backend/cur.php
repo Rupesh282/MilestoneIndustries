@@ -19,6 +19,7 @@
     padding: 0px;
 }
 </style>
+
 <?php
 
 
@@ -99,7 +100,7 @@
                     } else $imagepath= $relpath.'dummy/default.png';
 
                     $output .= '<li class="service-list">
-                        <img width=80px src='.$imagepath.' class="alignnone size-full wp-image-156">
+                        <img  width=20% height=100% src='.$imagepath.' class="alignnone size-full wp-image-156">
                         <a href='.$urlOfproduct.'>'.$nameOfproduct.'</a>
                     </li><br>';
                 }
