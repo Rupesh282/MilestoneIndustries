@@ -9735,8 +9735,13 @@ div.logo a img {
 }
 #output {
     position: absolute;
-    right: 45%;
+    right: 40%;
     top: 305%;
+    width: 45%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0px;
+    z-index: 999;
 }
 @media screen and (max-width: 600px) {
     ul.tagline {
@@ -9829,12 +9834,8 @@ div.logo a img {
     
     #output {
         position: absolute;
-        right: 70%;
+        right: 60%;
         top: 305%;
-    }
-    
-    .service-list {
-        width: 150% !important;
     }
 }
 .sticky {

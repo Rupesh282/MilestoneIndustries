@@ -77,7 +77,7 @@
         if($res = mysqli_query($conn , $sql)) {
             $count = mysqli_num_rows($res);
             if($count==0) {
-                $output = "<li class='service-list' style='width:290%;'><a href='#'>Not found</a></li>";
+                $output = "<li class='service-list'><a href='#'>Not found</a></li>";
             }
             else {
                 while($row = mysqli_fetch_array($res)) {
@@ -100,7 +100,7 @@
                     } else $imagepath= $relpath.'dummy/default.png';
 
                     $output .= '<li class="service-list">
-                        <img  width=20% height=100% src='.$imagepath.' class="alignnone size-full wp-image-156">
+                        <img height=40.5px src='.$imagepath.' class="alignnone size-full wp-image-156">
                         <a href='.$urlOfproduct.'>'.$nameOfproduct.'</a>
                     </li><br>';
                 }
