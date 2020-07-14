@@ -9834,7 +9834,8 @@ div.logo a img {
     
     #output {
         position: absolute;
-        right: 60%;
+        width: 90%;
+        right: 95%;
         top: 305%;
     }
 }

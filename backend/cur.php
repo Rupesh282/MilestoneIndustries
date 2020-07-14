@@ -3,19 +3,18 @@
     list-style-type: none;
     margin-left:0px;
     padding-left:0px;
-    display: inline-block;
     width:180%;
 }
 .service-list img
 {
     margin:2px;
     float:left;
+    /* box-sizing: content-box; */
 }
 .service-list a{
     margin:0px;
     text-align: center; 
     width:100%;
-    display:inline-block;
     padding: 0px;
 }
 </style>
@@ -100,7 +99,7 @@
                     } else $imagepath= $relpath.'dummy/default.png';
 
                     $output .= '<li class="service-list">
-                        <img height=40.5px src='.$imagepath.' class="alignnone size-full wp-image-156">
+                        <img height="30" src='.$imagepath.' class="alignnone size-full wp-image-156">
                         <a href='.$urlOfproduct.'>'.$nameOfproduct.'</a>
                     </li><br>';
                 }

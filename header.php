@@ -16,12 +16,12 @@
         background-color: #f6f6f6;
         /* Grey background color */
         padding-left: 20%;
-        padding-top: 10px;
+        padding-top: 5px;
         padding-bottom: 5px;
         /* Add some padding */
         text-decoration: none;
         /* Remove default text underline */
-        font-size: 18px;
+        font-size: 16px;
         /* Increase the font-size */
         color: black;
         /* Add a black text color */
