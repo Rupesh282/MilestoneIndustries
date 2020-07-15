@@ -240,8 +240,8 @@
                                 <img src="assets/img/gallery/services1.png " alt=" ">
                             </div>
                             <div class="services-caption ">
-                                <span>Strategy planing</span>
-                                <p><a href="# ">Within the construction industry as their overdraft</a></p>
+                                <span>Import and Export</span>
+                                <p><a href="# ">Facilitating customers across the globe</a></p>
                             </div>
                         </div>
                     </div>
@@ -251,8 +251,8 @@
                                 <img src="assets/img/gallery/services2.png " alt=" ">
                             </div>
                             <div class="services-caption ">
-                                <span>Strategy planing</span>
-                                <p><a href="# ">Within the construction industry as their overdraft</a></p>
+                                <span>Distribution</span>
+                                <p><a href="# ">Within India and abroad</a></p>
                             </div>
                         </div>
                     </div>

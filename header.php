@@ -7,22 +7,7 @@
 
 <!--for search box-->
 <style>
-    #output {
-    	position: absolute;
-    	left: -10%;
-        /* Remove default list styling */
-        list-style-type: none;
-        padding: 0;
-        margin: 0px;
-        z-index: 999;
-    }
-
-    #output li {
-    	width: 150%;
-    }
-    
     #output li a {
-    	width: 100%;
         border: 1px solid #ddd;
         border-radius: 5px;
         /* Add a border to all links */
@@ -31,12 +16,12 @@
         background-color: #f6f6f6;
         /* Grey background color */
         padding-left: 20%;
-        padding-top: 10px;
+        padding-top: 5px;
         padding-bottom: 5px;
         /* Add some padding */
         text-decoration: none;
         /* Remove default text underline */
-        font-size: 18px;
+        font-size: 16px;
         /* Increase the font-size */
         color: black;
         /* Add a black text color */
@@ -149,7 +134,7 @@
                                 <a href="/"><img src="assets/img/logo/logo.png " alt=" " style="padding-top: 20px; padding-right: 0px;"></a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 d-none d-md-block">
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block">
                             <div class="menu-wrapper d-flex align-items-center justify-content-end ">
                                 <!-- Main-menu -->
                                 <div class="main-menu">

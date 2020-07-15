@@ -283,6 +283,9 @@
         variableWidth: true
     });
 
+    // $(document).ready(function() {
+    //     $(".service-list img").css("height", $("#output").height());
+    // });
 })(jQuery);
 
 
