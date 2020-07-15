@@ -5354,7 +5354,8 @@ hero-btn {
 /* line 15, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
 .services-area .single-services .services-caption {
     position: relative;
-    background: #fff;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     width: 80%;
     padding: 33px 46px 16px 32px;
     margin-top: -50px;
@@ -5392,8 +5393,8 @@ hero-btn {
     font-family: "Roboto", sans-serif;
     position: relative;
     color: #e94d65;
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 18px;
     display: block;
     padding-left: 60px;
 }
