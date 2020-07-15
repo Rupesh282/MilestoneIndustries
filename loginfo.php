@@ -10,7 +10,7 @@
     $email_table    = "emails";
     $email_col      = "email";
     $email_database 		= "subscribers";
-
+    $isSubed = "isSubed";
 
 
     //database of products
