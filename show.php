@@ -6,7 +6,7 @@
     <!-- when using in local machine , use path to the assets folder here instaed of "/" from root directoryy i.e. /www/html/-->
     <!-- ex : if your assets folder is /www/html/MilstoneIndustries/  the replace "/" by "/MilstoneIndustries/"-->
     <base href="/"/>
-    <!--<base href="/Milstone/MilestoneIndustries/"/>--> 
+    <!-- <base href="/Milstone/MilestoneIndustries/"/> -->
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -183,8 +183,12 @@
                                     </li>
                                     <li>
                                             Link :
-                                            <a target="_blank" id="url" href="<?php echo $array['data']['link']; ?>"><?php echo $array['data']['link']; ?></a>
+                                            <a target="_blank"  href="<?php echo $array['data']['link']; ?>"><?php echo $array['data']['link']; ?></a>
                                             <button onclick="copyToClipboard('#url')" style="color:black;">copy link</button>
+                                            <input type="hidden"  id="url">
+                                            <script>
+                                                document.getElementById("url").innerHTML=window.location.href;
+                                            </script>
                                     </li>
                                 </ul>
                             </aside>
