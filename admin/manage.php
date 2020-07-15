@@ -109,6 +109,9 @@
             <form action="feedback.php" method="POST">
                 <input type="submit" value="SEE FEEDBACK" class="btn btn-success" id="btn" name="submit">
             </form>
+            <form action="bulk_mail.php" method="POST">
+                <input type="submit" value="Send Mail" class="btn btn-success" id="btn" name="send">
+            </form>
           </div>';
 ?>
 </center>
