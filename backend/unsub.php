@@ -1,6 +1,7 @@
 <?php
         
 
+
     //login info for mysql
     require_once "../loginfo.php";
 
@@ -19,7 +20,10 @@
         die("[-] Error while using database !!");
     }
 
-    $sql = "delete from $email_table where $email_col='$emaild'";
+
+
+    $sql = "update $email_table set $isSubed=0 where $email_col='$emaild'";
+
     if(!mysqli_query($conn , $sql)) {
         die("[-] Cant delete email from database");
     } else {

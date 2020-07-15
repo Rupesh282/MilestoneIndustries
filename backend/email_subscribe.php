@@ -42,8 +42,9 @@
                 <h2>Greetings From Milestone , <br>
                 You have subscribed to our channel successfully !!!
                 </h2>
-                <h3><a href="www.amazon.in">Click here to unsubscribe</a></h3>
+                <h3><a href="#">Click here to unsubscribe</a></h3>
             ';
+            //  href link : path/unsub.php?email='.$reciever_email.'
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
@@ -75,18 +76,34 @@
 
     } else {
         //If email is valid check if it is already present in database
-        $sql = "select count(1) from $email_table where $email_col='$email'"; 
+        $sql = "select * from $email_table where $email_col='$email'"; 
         $res = mysqli_query($conn , $sql);
         if(!$res) {
-            die("here");
+            die("[-] Error while querying email !!");
         }
-        $rows = mysqli_fetch_row($res);
-        if($rows[0] >=1 ) {
-            //if present show alert and close the tab
-            $output = "You have already subscribed !!";
+        // $rows = mysqli_fetch_row($res);
+        if(mysqli_num_rows($res) > 0) {
+            $row = mysqli_fetch_assoc($res);
+
+            if($row[$isSubed]==1) {
+                //he is already subed
+                $output = "You are already subscribed !!";
+            } else {
+                //update isSubed to 1
+                $sql = "update $email_table set $isSubed=1 where $email_col='$email'";
+                $res = mysqli_query($conn , $sql);
+                if($res) {
+                    //now send email
+                    $reciever_email = $email;
+                    send_email($sender_email , $sender_password , $reciever_email);
+                    $output = "You are subscribed successfully !";
+                } else {
+                    die("Error while setting isSubed status 1");
+                }
+            }
         } else {
             //insert current email into table
-            $sql = "insert into $email_table values('$email')";
+            $sql = "insert into $email_table($email_col) values('$email')";
             if(!mysqli_query($conn , $sql)) {
                 die("<h3>[-] Failed to add email to database !</h3>");
             }
@@ -94,7 +111,6 @@
                 //now send email
                 $reciever_email = $email;
                 send_email($sender_email , $sender_password , $reciever_email);
-                //show alert message to users and quite opened tab
                 $output = "You are subscribed successfully !";
             }
         }
