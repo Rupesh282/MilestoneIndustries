@@ -32,7 +32,7 @@
     }
 
     //create table for emails : 
-    $sql = "CREATE TABLE $email_table($email_col VARCHAR(50));";
+    $sql = "CREATE table $email_table($email_col VARCHAR(50) , $isSubed bool default 1);";
     if(!mysqli_query($conn , $sql)) {
         die("[-] TABLE CREATION ERROR -> email table");
     }

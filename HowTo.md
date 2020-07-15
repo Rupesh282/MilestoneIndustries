@@ -10,8 +10,7 @@
 - `create table categories(category VARCHAR(100));`
 
 - create email table :
-- `create table emails(email VARCHAR(50));`
-
+- `CREATE table emails(email VARCHAR(50) , isSubed bool default 1);`
 
 
 # for creating new users from root : 
