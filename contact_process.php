@@ -28,11 +28,8 @@
             echo json_encode("0");
             die("");
         } else {
-               $output =  '<h6> A OTP is sent to your email address :  '.$_POST['email'].' 
-                  <br>Please submit it here , to verify your account. (OTP is valid for 3 minutes)
-                 </h6>
-                <form action="contact_process.php" method="POST" id="otp-submit">
-                    <input id="otpValue" type="text" name="otpValue" autocomplete="off" required>
+               $output =  '<form action="contact_process.php" method="POST" id="otp-submit">
+                    <input id="otpValue" type="text" placeholder="OTP is sent to your email" name="otpValue" autocomplete="off" required>
                     <input id="ValidateOtp" type="submit" value="submit OTP" name="ValidateOtp" >
                     <input id="message" type="hidden" name="message" value="'.$_POST['message'].'" >
                     <input id="name" type="hidden" name="name" value="'.$_POST['name'].'">
@@ -45,7 +42,6 @@
         }
     }
     
-            //this is resend from (add if asked)
                 //<form action="contact_process.php" method="POST" id="otp-resend">
                     //<input id="ResendOtp" type="submit" value="Resend OTP" name="ResendOtp" >
                     //<input id="message" type="hidden" name="message" value="'.$_POST['message'].'" >
@@ -220,17 +216,18 @@
                 $sql = "insert into $feedback_table(message , name , email , subject , cellno) values('".$message."' ,'".$name."' ,'".$email."' ,'".$subject."' ,'".$cellno."')";
                 $res = mysqli_query($conn , $sql);
                 if($res) {
-                    echo json_encode("We have recieved your message , Thank you!");
+                    echo json_encode("Thank you for reaching out!");
                 }
             } 
             die("");
         } else {
-            $output = "Try again,OTP is wrong!!<br>";
             if($difTime > $otpTime || $date1!=$date2) {
                 //delete otp (timed out)
                 $sql = "delete from $otp_table where email='".$email."'";
                 $res = mysqli_query($conn , $sql);
-                $output.="generate new OTP by sending the message again !";
+                $output = "click send again!";
+            } else {
+                $output = "OTP is wrong!";
             }
             echo json_encode($output);
             die(""); }
@@ -239,10 +236,12 @@
         //remove the previous otp from database 
         $sql = "delete from $otp_table where email='".$email."'";
         $res = mysqli_query($conn , $sql);
-        if($res)
-            echo json_encode("new OTP sent to your email");
-        else 
+        if($res) {
+                //otp is send again
+        }
+        else {
             echo json_encode("[+] Error while sending new OTP");
+        }
     }
 
     $otp = rand(100000, 999999);

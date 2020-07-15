@@ -65,6 +65,18 @@ html,body
 
     require_once "loginfo.php";
 
+    //Connection
+    $conn = new mysqli($servername , $username , $password);
+    if(!$conn) {
+        die("[-] Connection error with MySql");
+    }
+
+    //first use database
+    $sql = "USE $product_database";
+    if(!mysqli_query($conn , $sql)){
+        die("Error while using database !!");
+    }
+
     if(isset($_POST['submit'])) {
         //echo $_POST['search'].'<br>';
         //echo $_POST['category'].'<br>';
@@ -75,11 +87,7 @@ html,body
 
         //first take all product from database and then show them (add link to their seperate page)
         if($src != "") {
-            if($ctg == "ALL Type") {
-                $sql = "select * from $product_table where $product_name like '%$src%'";
-            } else {
-                $sql = "select * from $product_table where $product_name like '%$src%' AND $category='$ctg'";
-            }
+            $sql = "select * from $product_table where $product_name like '%$src%'";
             $res = mysqli_query($conn , $sql);
             if(!$res) {
                 echo "[-] Error while querying in product database";
