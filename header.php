@@ -173,7 +173,7 @@
                                     <ul>
                                         <li>
                                             <div class="input-group" id="input" style="position:absolute;top:30%;left:30%;">
-                                                <form action="search-page.php" method="POST">
+                                                <form action="search-page" method="POST">
                                                     <input type="text" name="search" class="form-control" placeholder="Search here.." onkeyup="searchq();" autocomplete="off" required>
                                                   <button class="btn btn-secondary" type="submit" name="submit">
                                                     <i class="fa fa-search">
